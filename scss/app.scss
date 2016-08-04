@@ -49,4 +49,16 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-@import  main.scss;
+@import 'main';
+@import 'color';
+@import 'mixins';
+@import 'variables';
+@import 'components/apla';
+@import 'components/avatar';
+@import 'components/button';
+@import 'components/icons';
+@import 'navigation';
+@import 'pages/login/avatar';
+@import 'pages/login/background';
+@import 'pages/login/border';
+@import 'pages/login/form';
