@@ -42,7 +42,7 @@
                       <div class="box_form">
                         <div class="log_avatar">
                           <figure>
-                            <img src="img/ninja.png" alt="user img with avatar">
+                            <img id="avatar" src="img/ninja.png" alt="user img with avatar">
                           </figure>
                         </div>
                         <!-- user login -->
@@ -56,7 +56,7 @@
                             <form>
                               <div class="row">
                                 <div class="small-12 medium-10 columns">
-                                  <input type="password"></input>
+                                  <input type="password" id="password"></input>
                                 </div>
                                   <!--icon keyboard -->
                                 <div class="small-12 medium-2 columns">
@@ -64,15 +64,18 @@
                                     <spam class="icon-keyboard"></spam>
                                   </div>
                                 </div>
-                            </form>
-                          </div>
 
+                            </form>
+
+                          </div>
+                          <!--response error -->
+                             <div id="blad"></div>
                         <!-- buttons  select other / send -->
                         <div class="buttons_form">
                           <div class="row">
                             <div class="large-12 columns">
-                              <button>SELECT OTHER</button>
-                              <button>GO</button>
+                              <button >SELECT OTHER</button>
+                              <button id="user_btn">GO</button>
                             </div>
                           </div>
                         </div>
