@@ -1,11 +1,12 @@
-.container{
-	height: 700px;
-	width: 100%;
-	padding-top: 5%;
 
-}
 .login_box{
+	padding:5% 0;
 	background-color:$login-bg;
-	height: 550px;
+	
 }
-
+body{
+	background-image: url('../img/bg_layer.png');
+	background-repeat: no-repeat;
+	background-size:cover;
+	
+}

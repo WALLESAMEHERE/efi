@@ -1,0 +1,25 @@
+@media #{$small-only}{
+	.buttons_form{
+		button{
+			width:50%;
+		}
+	}
+} 
+@media #{$small-up}  
+{
+	figure{
+		margin:10px 0;
+		.logo{
+			float:none;
+		}
+	} 
+ }
+ 
+ @media #{$large-up}{
+ 	body{
+ 		background-size:150%;
+ 		.logo{
+		float:right;
+		}	
+ 	}
+ }

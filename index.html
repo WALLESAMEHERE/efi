@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>efi3</title>
     <link rel="stylesheet" href="css/app.css">
+
+
   </head>
-  <body>
+  <body class="container">
  
-  <div class="row">
-    <div class="small-12 columns">
+ 
    <!-- main container-->
-      <div class="container">
+      
           <div class="row"> 
   <!-- logo box-->
             <div class="small-12 large-3 columns">
@@ -20,8 +21,8 @@
                   <div class="small-12 columns">
                   
                     <figure class="logo">
-                      <a href=""><img src="img/logo.png"></a>
-                    </figuree>
+                      <a href=""><img src="img/logo.png" alt="efi3 logo"></a>
+                    </figure>
 
                   </div>
                 </div>
@@ -33,44 +34,76 @@
                   <div class="small-12 columns">
                     <div class="login_box">
   <!-- h1,p -->
-                    <header>
-                      <h1>LOGIN </h1>
-                      <p> Lorem sjai eruwirua siruasi ru</p>
-                    </header>
-  <!-- div with form -->
-                    <div class="box_form">
+                      <header>
+                        <h1>Login </h1>
+                        <p> Aby zaimportować dane zaloguj sie do swojego banku</p>
+                      </header>
+    <!-- div with form -->
+                      <div class="box_form">
                         <div class="log_avatar">
                           <figure>
-                            <img src="">
+                            <img src="img/ninja.png" alt="user img with avatar">
                           </figure>
                         </div>
-                        <div class="log_user"></div>
-                        <form></form>
-                        <div class="buttons_form"></div>
+                        <!-- user login -->
+                        <div class="log_user">
+                            <span class="user_name">
+                                <!-- icon X-->
+                              <p> 13111333131<span class="icon-x"> </span></p>
+                            </span>
+                        </div>
+                                <!--user password / form -->
+                            <form>
+                              <div class="row">
+                                <div class="small-12 medium-10 columns">
+                                  <input type="password"></input>
+                                </div>
+                                  <!--icon keyboard -->
+                                <div class="small-12 medium-2 columns">
+                                  <div class="keyboard">
+                                    <spam class="icon-keyboard"></spam>
+                                  </div>
+                                </div>
+                            </form>
+                          </div>
+
+                        <!-- buttons  select other / send -->
+                        <div class="buttons_form">
+                          <div class="row">
+                            <div class="large-12 columns">
+                              <button>SELECT OTHER</button>
+                              <button>GO</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
                     </div>
                   </div>
-                  </div>
                 </div>
-            </div>
-  <!-- end form box-->
+            </div>  
+             
+  
             <div class="small-12 large-3 columns">
             </div>
           </div>
-  <!-- navigation -->
+  <!-- end form box-->      
+  <!-- navigation footer-->
           <div class="row">
-            <div class="medium-3 columns"></div>
-            <div class="medium-6 columns">
+            
+            <div class="large-6 large-offset-3 small-12 small-centered columns">
                 <nav>
                   <ul>
-                    
+                    <li><a>SECURITY</a></li>
+                    <li><a>LOGIN IN</a></li>
+                    <li><a>CONTACT</a></li>
                   </ul>
                 </nav>
-             </div>
-            <div class="medium-3 columns"></div>
-          </div>
-       </div>
-     </div>
-    </div>
+             </div></div>
+            
+
+       
+    
+   
 <!--scripts-->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/what-input/what-input.js"></script>

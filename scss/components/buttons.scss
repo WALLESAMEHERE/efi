@@ -1,0 +1,10 @@
+.buttons_form button{
+	padding: 10px;
+	width: 30%;
+	color:white;
+	@include border-radius(5px);
+	&:hover{
+		background-color:white;
+		color:black;
+	}
+}

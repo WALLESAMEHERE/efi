@@ -3,16 +3,16 @@
 @import 'variables';
 @import 'components/apla';
 @import 'components/logo';
-@import 'components/button';
+@import 'components/buttons';
 @import 'components/icons';
+@import 'navigation';
 @import 'navigation';
 @import 'pages/login/avatar';
 @import 'pages/login/background';
 @import 'pages/login/border';
 @import 'pages/login/form';
 @import 'fonts';
+@import 'media-queries';
 @import 'style';
 
-*{
-	box-sizing:border-box;
-}
+

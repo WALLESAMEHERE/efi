@@ -1,5 +1,13 @@
-.box_form{
-	height:300px;
-	background-color:$form-box;
-	margin:100px 20px 50px 20px;
+.box_form{ 
+	margin:150px 20px 50px 20px;
+	padding: 0 15px 15px 15px;
+	input{
+		margin-top: 5px;
+		@include border-radius(5px);
+	}	
+	.keyboard {
+		font-size: 2em;		
+	}
 }
+
+ 

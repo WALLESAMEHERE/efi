@@ -1,6 +1,13 @@
 .log_avatar{
 	
-	width: 100px;
-	height: 100px;
+	width: 120px;
+	height: 120px;
 	margin: 0 auto;
+	background-color:white;
+	@include border-radius(100%);
+	margin-top:-65px;
+
+}
+.avatar-radius{
+	@include border-radius(100%); 
 }
