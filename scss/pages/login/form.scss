@@ -1,6 +1,7 @@
 .box_form{ 
 	margin:150px 20px 50px 20px;
 	padding: 0 15px 15px 15px;
+
 	input{
 		margin-top: 5px;
 		@include border-radius(5px);
@@ -11,6 +12,8 @@
 	#blad{
 		background-color: red;
 		width: 100%;
+		margin:0 0 10px 0;
+		opacity: .8;
 
 	}
 }
