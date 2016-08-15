@@ -60,9 +60,9 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$('#login').on('submit', function(e){
 		e.preventDefault();
-		$(this).attr('disabled', 'disabled'); // disabled submit button
+		$(this).find(':submit').attr('disabled','disabled');// disabled submit button
 		 setTimeout(function() {
-	        $('#user_btn').attr("disabled", false); // enabled submit button
+	        $(':submit').attr('disabled', false); // enabled submit button
 	    }, 4000);
 		var pass = $('#password').val(); // input password
 		var user = $('#user').text();	// user name
