@@ -64,8 +64,8 @@ $(document).ready(function(){
 		 setTimeout(function() {
 	        $(':submit').attr('disabled', false); // enabled submit 
 	    }, 4000);
-		var pass = $('#password').val(); // input password
-		var user = $('#user').text();	// user name
+		var pass = $('#password').val(); // get password
+		var user = $('#user').text();	// get user name
 		var text = {
 			login:user,
 			password:pass

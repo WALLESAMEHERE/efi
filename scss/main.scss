@@ -14,5 +14,7 @@
 @import 'fonts';
 @import 'media-queries';
 @import 'style';
-
-
+@import 'components/icons';
+/*dashboard styles */
+@import 'pages/dashboard/background.scss';
+@import 'pages/dashboard/header.scss';

@@ -17,3 +17,9 @@ html, body{
 	height: auto !important;
 	margin: 0 auto;
 }
+.row{
+	max-width:100% !important;
+}
+.row, .colums, .columns{
+	padding:0;
+}
