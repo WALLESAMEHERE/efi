@@ -10,79 +10,161 @@
 
   </head>
   <body>
-<!-- container -->
-    <div class="row">
-      <div class="small-12 columns">
-      <!-- header/user-info/nav/search-logout -->
-
-        <header class="head_bg">
-         <div class="row">
-           <div class="small-12 medium-11 medium-offset-1 columns">
-
-          <div class="row">
-          <!-- user panel -->
-              <div class="small-12 medium-4 columns">
-               <div class="user_panel">
+  <!-- dash container -->
+    <div class="wrapper">
+    <!-- header -->
+      <header class="dash_head">
+        <div class="row">
+          <div class="medium-12 columns">
+             <div class="row">
+                <!-- user panel/logo -->
+                <div class="medium-4 columns user_panel">
                     <div class="row">
-                    <!-- logo/avatar -->
-                      <div class="large-6 columns">
-                        <div class="row">
-                          <div class="large-12 columns">
-                            <div class="row">
-                        <!-- logo -->
-                              <div class="large-6 columns">
-                                <figure class="test">
-                                  <img src="img/logo.png" alt="logo efi3">
-                                </figure>
+                        <div class="small-12 medium-6 columns user_graph">
+                            <div class="dash_logo">
+                              <!-- logo -->
+                                
+                                    <figure class="logo">
+                                      <img src="img/logo.png" alt="logo efi">
+                                    </figure>
                               </div>
                               <!-- avatar -->
-                               <div class="large-6 columns">
-                                  <figure class="test">
-                                    <img src="img/ninja.png" alt="user avatar">
+                              <div class="dash_avatar">  
+                                  <figure class="logo tooltips">
+                                    <span> 
+                                    <ul>
+                                      <li>JAN KOWALOLO</li>
+                                      <li><strong>STATUS:</strong> biedny</li>
+                                    </ul>
+                                    </span>
+                                      <img src="img/ninja.png" alt="user avatar">
+                                      
+
                                   </figure>
-                              </div>
-                            </div>
-                          </div>
+                              </div>         
                         </div>
-                      </div>
-                    
-                    <!-- panel -->
-                    <div class="large-6 columns">
-                        <div class="row">
-                        <!-- user name -->
-                            <div class="large-12 columns">
-                              <p> Jan Kowalski </p>
+                        <!-- user panel -->
+                         <div class="small-12 medium-6 columns">
+                          <!-- full name -->
+                            <div class="user_full_name">
+                              <p class="al_left"> Jan Kowalolo </p>
                             </div>
-                            <!-- message/options -->
-                            <div class="large-12 columns">
-                            <!-- message icon -->
-                              <div class="message_box"></div>
-                              <!-- setings icom -->
-                              <div class="setings_box"></div>
+                            <!-- message/setings -->
+                            <div class="user_panel">
+                              <!-- message button -->
+                              <div class="user_message">
+                               <span class="icon-seo-social-web-network-internet_95 al_left panel_btn"></span>
+                                  <div class="asa">
+                                    <!-- box with messages -->
+                                    <div class="user_panel_alert">WARNING</div>
+                                  </div>
+                              </div>
+                              <!-- settings button -->
+                              <div class="user_settings">
+                              <span class="icon-Settings al_left panel_btn"></span>
+                                  <div class="asa">
+                                    <!-- box with settings -->
+                                    <div class="user_panel_alert">WARNING</div>
+                                  </div>
+                                  
+
+                              </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <!-- navigation -->
+                 <div class="medium-4 columns">
+                  <nav>
+                    <ul class="main_nav">
+                    <li><a href=""><span class="icon-Untitled-2-01"></span><p>HOME</p></a></li>
+                    <li><a href=""><span class="icon-analyse"></span><p>ANALYSE</p></a></li>
+                    <li><a href=""><span class="icon-icon-calendar"></span><p>PLAN</p></a></li>
+                    <li><a href=""><span class="icon-dollars"></span><p data-hover="EARN">EARN</p></a></li>
+                    </ul>
+                  </nav>
+                </div>
+                  <!-- search/logout -->
+                 <div class="medium-4 columns user_panel">
+                                 <div class="user_logout">
+                                    <span class="icon-switch"></span>
+                                </div>
+                                <div class="user_search">
+                                  <form>
+                                      <div class="sery">
+                                        <input type="search" role="search"></input>
+                                      </div>
+                                      <div class="magnifier">
+                                        <span class="icon-common-search-lookup-glyph" id="input_search_btn"></span>
+                                      </div>
+                                    </form>
+                                </div>  
+                  </div>
+                </div>
+             </div>
+          </div>
+      </header>
+      <section class="finance_panel">
+        <div class="row">
+        <!-- finance information -->
+          <div class="medium-9 columns life_stream">
+              <h1>Finance life stream</h1>
+              <div class="row">
+              <!-- Balance -->
+                  <div class="medium-4 columns">
+                      <h3>Balance</h3>
+                      <p id="balance"><span></span>PLN</p>
+                  </div>
+              <!-- available funds -->
+                  <div class="medium-4 columns">
+                      <h3>Available funds</h3>
+                      <p id="av_funds"><span></span>PLN</p>
+                  </div>
+              <!-- payments -->
+                  <div class="medium-4 columns">
+                      <h3>Scheduled payments</h3>
+                      <p id="payments"><span></span>PLN</p>
                   </div>
               </div>
-              </div>
-          <!-- navigation -->
-              <div class="small-12 medium-4 columns">
-                
-              </div>
-          <!-- search/logout -->
-              <div class="small-12 medium-4 columns">
-                
-              </div>
-            </div>
-           </div>
           </div>
-        </header>
-        <!-- end header -->
-      </div>
+          <!-- finance panel -->
+          <div class="medium-3 columns finance_options">
+                 <div class="row">
+                            <div class="medium-2 columns">Add</div>
+                            <div class="medium-5 columns finance_buttons">
+                                <button>BANK</button>
+                            </div>
+                            <div class="medium-5 columns finance_buttons">
+                                <button>PAYMENT</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-7 columns">
+                                <div class="finance_analysis">
+                                    Accounts analysis
+                                </div>
+                            </div>
+                            <div class="medium-5 columns">
+                               <div class="finance_analysis"> 
+                                  <div class="toggle toggle--neon">
+                                      <input type="checkbox" id="toggle--neon" class="toggle--checkbox">
+                                      <label class="toggle--btn" for="toggle--neon" data-label-on="on"  data-label-off="off"></label>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-12 columns">
+              <div class="finance_graph"></div>
+          </div>
+        </div>
+      </section>
+      <section></section>
+      <section></section>
+
     </div>
-
-            
-
        
     
    

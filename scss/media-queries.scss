@@ -4,6 +4,10 @@
 			width:50%;
 		}
 	}
+	html, body{
+		height:auto !important;
+		margin: 0 auto;
+	}
 } 
 @media #{$small-up}  
 {
@@ -14,9 +18,15 @@
 		}
 	} 
  }
- 
+ @media #{$medium-up}{
+ 	html, body{
+		height:100%;
+		 
+	}
+ }
  @media #{$large-up}{
  	body{
+
  		background-size:150%;
  		.logo{
 		float:right;

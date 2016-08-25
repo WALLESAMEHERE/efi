@@ -13,13 +13,25 @@ figure{
 	padding-top: 5%;
 	margin:0;
 }
-html, body{
-	height: auto !important;
-	margin: 0 auto;
+
+ .al_left{
+	text-align:left;
 }
-.row{
-	max-width:100% !important;
+.al_right{
+	text-align: right;
 }
-.row, .colums, .columns{
-	padding:0;
-}
+.new_info{
+	position:absolute;
+	content: "";
+	top:1px;
+	right: 1px;
+	background-color: #EB2A81;
+	padding: 0px 6px 4px 6px;
+	line-height: .9;
+	@include border-radius(100%);
+	text-align: center;
+	font-size: .8em;
+ }
+ span{
+ 	cursor: pointer;
+ }

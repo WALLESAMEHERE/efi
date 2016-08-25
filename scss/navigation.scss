@@ -19,3 +19,52 @@ ul{
 		}
 	}
 }
+ 
+
+/* dashboard */
+
+.main_nav{
+	padding-left:20px;
+ 	li{ 
+ 		position: relative;
+ 		padding:35px 14px 5px 14px;
+ 		text-align: center;
+ 		display:inline;
+ 		a{ 
+ 			text-align: center;
+ 			padding:50px 0;
+
+ 		}
+ 		&:hover p{
+ 				color:white;
+ 				font-weight: bolder;
+ 				-webkit-transform: translateY(-220%);
+				-moz-transform: translateY(-220%);
+				transform: translateY(-220%);
+ 			}
+ 		p{
+	 		-webkit-transition: -webkit-transform 0.3s;
+			-moz-transition: -moz-transform 0.3s;
+			transition: transform 0.3s;
+	 		padding:15px 0 0 0;
+ 		}
+	 	&:hover, &:hover::after,&:hover span{
+	 		background-color:black;
+	 		color:white;	 
+	 	}
+	 	&:after{
+	 		    content: "";
+			    position: absolute;
+			    top: 94%;
+			    left: 50%;
+			    height: 16px;
+			    width: 16px;
+			    @include border-radius(100%);
+			    margin-left: -8px; 
+	 	}
+ 	}
+ 	span{
+		margin:20px 0;
+		font-size:2.8em;
+	}
+ }

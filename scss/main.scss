@@ -7,14 +7,17 @@
 @import 'components/icons';
 @import 'navigation';
 @import 'navigation';
+@import 'fonts';
+@import 'media-queries';
+@import 'style';
+/* login page */
 @import 'pages/login/avatar';
 @import 'pages/login/background';
 @import 'pages/login/border';
 @import 'pages/login/form';
-@import 'fonts';
-@import 'media-queries';
-@import 'style';
-@import 'components/icons';
-/*dashboard styles */
-@import 'pages/dashboard/background.scss';
-@import 'pages/dashboard/header.scss';
+
+/* dashboard */
+@import 'pages/dashboard/background';
+@import 'pages/dashboard/styles';
+@import 'pages/dashboard/general';
+@import 'pages/dashboard/header';
