@@ -98,7 +98,7 @@ section{
 				width: 50%;
 				float: left;
 				content: attr(data-label-off);
-       			 background-color:red;
+       			 background-color:$warning_msg;
 				animation: neon 1.5s ease-in-out infinite alternate;
 				animation-delay: 90ms;
 			 
@@ -120,7 +120,7 @@ section{
 						 
 					}
 					&:after {
-           				background-color:green;
+           				background-color:$light-green;
 						animation: neon 1.5s ease-in-out infinite alternate;
 						animation-delay: 90ms;
 						 
