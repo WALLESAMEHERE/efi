@@ -1,5 +1,5 @@
 section{
-	background-color: silver;
+	background-color: $light-silver;
 	color:black;
 }
 .finance_panel{
@@ -39,6 +39,9 @@ section{
 
 }
 .life_stream{ 
+	span,p,b{
+	color:black;
+	}
 	p{
 		font-size: 1.9em;
 	}
