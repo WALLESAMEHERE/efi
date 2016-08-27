@@ -98,8 +98,7 @@ section{
 				float: left;
 				content: attr(data-label-off);
        			 background-color:$warning_msg;
-				animation: neon 1.5s ease-in-out infinite alternate;
-				animation-delay: 90ms;
+			 
 			 
 			}
 			&:after {
@@ -115,13 +114,12 @@ section{
 				& + .toggle--btn {
 					&:before {
             			background-color:transparent;
-						animation: none;
+						 
 						 
 					}
 					&:after {
            				background-color:$light-green;
-						animation: neon 1.5s ease-in-out infinite alternate;
-						animation-delay: 90ms;
+					 
 						 
 					}
 				}

@@ -80,17 +80,18 @@ $(document).ready(function() {
                 console.log(i, v.toLocaleString());
             });
             ///////////////////////////////// TEST TEST TEST
-            // formatted, data   
             var currency = " PLN"   
-            var poszlo = change(text.balance, ",", " ");
-            var poszlo1 = change(text.funds, ",", " ");
-            var poszlo2 = change(text.payments, ",", " ");
-
             //  adding the data to the structure
 
-            $('#balance span').html(poszlo.bold() + currency);
-            $('#av_funds span').html(poszlo1.bold() + currency);
-            $('#payments span').html(poszlo2.bold() + currency);
+            $('#balance span').html(
+            	change(text.balance, ",", "").bold() + currency
+            	);
+            $('#av_funds span').html(
+            	change(text.funds, ",", "").bold() + currency
+            	);
+            $('#payments span').html(
+            	change(text.payments, ",", "").bold() + currency
+            	);
 
           	var test = 5;
 
