@@ -1,18 +1,19 @@
 $(document).foundation();
 
 
+/// //HEAD
 
 $(document).ready(function() {
+
     "use strict"
-    // global url
+
 
     var config = {
         baseApi: "https://efigence-camp.herokuapp.com/api/"
     };
+
     // universal function 
-
     function sendA(endpoint, method, data, sCallback, eCallback) {
-
         $.ajax({
                 type: method,
                 data: data,
@@ -25,6 +26,7 @@ $(document).ready(function() {
                 eCallback(error);
             });
     }
+
     // ON SUBMIT - login
 
     $('#login').on('submit', function(e) {
@@ -33,6 +35,8 @@ $(document).ready(function() {
         setTimeout(function() {
             $(':submit').attr('disabled', false); // enabled submit 
         }, 4000);
+
+
         var pass = $('#password').val(); // get password
         var user = $('#user').text(); // get user name
         var text = {
@@ -40,6 +44,7 @@ $(document).ready(function() {
             password: pass
 
         };
+
 
         sendA("login", "POST", text, loginSucces, loginError);
 
@@ -87,9 +92,9 @@ $(document).ready(function() {
             });
             ///////////////////////////////// TEST TEST TEST
             // formatted, data      
-            var poszlo = change(text.balance, ",", "pln");
-            var poszlo1 = change(text.funds, ",", "pln");
-            var poszlo2 = change(text.payments, ",", "pln");
+            var poszlo = change(text.balance, ",", " pln");
+            var poszlo1 = change(text.funds, ",", " pln");
+            var poszlo2 = change(text.payments, ",", " pln");
 
             //  adding the data to structure
 
@@ -126,16 +131,15 @@ $(document).ready(function() {
 
         };
 
-        function lifeError() {
-            console.log("the error of downloading data");
-        };
+        function lifeError() {};
     };
     // induction function
     getDate();
 
     //////////////////////////////////////// ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ 
 
-    // user search animation
+    // user search animation 
+
 
     $('#input_search_btn').on('click', function() {
         $('.sery').toggleClass('clasa_on'); // width from 0 too 80%;
@@ -146,7 +150,6 @@ $(document).ready(function() {
 
     // click on button
     $('.panel_btn').on('click', function(e) {
-
         // condition - if button has active box
         if ($(e.target).parent().find('.user_panel_alert').hasClass('user_alert_on')) {}
         // condition - if button doesn't have active box
@@ -166,6 +169,4 @@ $(document).ready(function() {
             $('.user_panel_alert').removeClass('user_alert_on');
         }
     });
-
-
 });
