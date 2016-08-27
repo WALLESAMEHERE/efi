@@ -92,15 +92,15 @@ $(document).ready(function() {
             });
             ///////////////////////////////// TEST TEST TEST
             // formatted, data      
-            var poszlo = change(text.balance, ",", " pln");
-            var poszlo1 = change(text.funds, ",", " pln");
-            var poszlo2 = change(text.payments, ",", " pln");
+            var poszlo = change(text.balance, ",", " ");
+            var poszlo1 = change(text.funds, ",", " ");
+            var poszlo2 = change(text.payments, ",", " ");
 
             //  adding the data to structure
 
-            $('#balance span').html(poszlo);
-            $('#av_funds span').html(poszlo1);
-            $('#payments span').html(poszlo2);;
+            $('#balance span').html(poszlo.bold() + " PLN");
+            $('#av_funds span').html(poszlo1.bold() + " PLN");
+            $('#payments span').html(poszlo2.bold() + " PLN");
 
 
             // function - add a comma to of decimal and spaces to the thousandths
