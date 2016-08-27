@@ -91,16 +91,17 @@ $(document).ready(function() {
                 console.log(i, v.toLocaleString());
             });
             ///////////////////////////////// TEST TEST TEST
-            // formatted, data      
+            // formatted, data   
+            var currency = " PLN"   
             var poszlo = change(text.balance, ",", " ");
             var poszlo1 = change(text.funds, ",", " ");
             var poszlo2 = change(text.payments, ",", " ");
 
-            //  adding the data to structure
+            //  adding the data to the structure
 
-            $('#balance span').html(poszlo.bold() + " PLN");
-            $('#av_funds span').html(poszlo1.bold() + " PLN");
-            $('#payments span').html(poszlo2.bold() + " PLN");
+            $('#balance span').html(poszlo.bold() + currency);
+            $('#av_funds span').html(poszlo1.bold() + currency);
+            $('#payments span').html(poszlo2.bold() + currency);
 
           	var test = 5;
 
@@ -108,7 +109,7 @@ $(document).ready(function() {
             function change(number, comma, currency) {
                 number = new String(number);
                 if (number.length < 2) {
-                	//  change the number to the decimal
+                	//  change the number to the decimal number after the decimal point
                 	number = parseInt(number, 10) / 10;
                 	// change number to string
                 	  var stringNumber = number.toString();
