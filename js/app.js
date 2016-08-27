@@ -102,12 +102,19 @@ $(document).ready(function() {
             $('#av_funds span').html(poszlo1.bold() + " PLN");
             $('#payments span').html(poszlo2.bold() + " PLN");
 
+          	var test = 5;
 
             // function - add a comma to of decimal and spaces to the thousandths
             function change(number, comma, currency) {
                 number = new String(number);
                 if (number.length < 2) {
-                    var wynik = 0 + comma + number + currency;
+                	//  change the number to the decimal
+                	number = parseInt(number, 10) / 10;
+                	// change number to string
+                	  var stringNumber = number.toString();
+                	// change dot to comma
+                	  	stringNumber = stringNumber.replace("\.",",");              	  	               	  
+                    var wynik = stringNumber + currency;
                     return wynik;
                 } else if (number.length < 3) {
                     var numberK = number.slice(0, number.length - 1);
