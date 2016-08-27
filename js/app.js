@@ -7,11 +7,9 @@ $(document).ready(function() {
 
     "use strict"
 
-
     var config = {
         baseApi: "https://efigence-camp.herokuapp.com/api/"
     };
-
     // universal function 
     function sendA(endpoint, method, data, sCallback, eCallback) {
         $.ajax({
@@ -42,24 +40,16 @@ $(document).ready(function() {
         var text = {
             login: user,
             password: pass
-
         };
-
-
         sendA("login", "POST", text, loginSucces, loginError);
-
-
         // api succes 
         function loginSucces(response) {
-
             if (pass == "") { // condition - if the field is empty 
                 loginError();
                 return false;
             } else {
-
                 $("#blad").html(''); // clear error
                 $(window).attr("location", "dash.html"); // replace to dashboard
-
             }
         }
         // api error
@@ -81,7 +71,6 @@ $(document).ready(function() {
         sendA("data/summary", "GET", {}, lifeFinance, lifeError);
         // succes
         function lifeFinance(a) {
-
             var text = a.content[0];
 
             ///////////////////////////////// TEST TEST TEST
@@ -135,10 +124,7 @@ $(document).ready(function() {
                     console.log(number);
                 }
             }
-
-
         };
-
         function lifeError() {};
     };
     // induction function
@@ -148,11 +134,9 @@ $(document).ready(function() {
 
     // user search animation 
 
-
     $('#input_search_btn').on('click', function() {
         $('.sery').toggleClass('clasa_on'); // width from 0 too 80%;
     });
-
 
     // button message / settings - alert box 
 
