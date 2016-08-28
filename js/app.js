@@ -84,13 +84,13 @@ $(document).ready(function() {
             //  adding the data to the structure
 
             $('#balance span').html(
-            	change(text.balance, ",", "").bold() + currency
+            	change(text.balance, ",", "") + currency
             	);
             $('#av_funds span').html(
-            	change(text.funds, ",", "").bold() + currency
+            	change(text.funds, ",", "") + currency
             	);
             $('#payments span').html(
-            	change(text.payments, ",", "").bold() + currency
+            	change(text.payments, ",", "") + currency
             	);
 
           	var test = 5;
@@ -98,6 +98,7 @@ $(document).ready(function() {
             // function - add a comma to of decimal and spaces to the thousandths
             function change(number, comma, currency) {
                 number = new String(number);
+               
                 if (number.length < 2) {
                 	//  change the number to the decimal number after the decimal point
                 	number = parseInt(number, 10) / 10;
@@ -106,12 +107,12 @@ $(document).ready(function() {
                 	// change dot to comma
                 	  	stringNumber = stringNumber.replace("\.",",");              	  	               	  
                    	stringNumber += currency;
-                    return stringNumber
+                    return stringNumber.bold();
                 } else if (number.length < 3) {
                     let numberK = number.slice(0, number.length - 1);
                     numberK += comma;
                     numberK += number.slice(number.length - 1, number.length) + currency;                    
-                    return numberK
+                    return numberK.bold();
                 } else if (number.length < 8) {
                     let numberK = number.slice(0, number.length - 4);
                     numberK += " ";
@@ -119,7 +120,7 @@ $(document).ready(function() {
                     numberK += comma;
                     numberK += number.slice(number.length - 1, number.length);
                    	numberK += number.slice(number.length - 1, number.length) + currency;
-                    return numberK
+                    return numberK.bold();
                 } else {
                     console.log(number);
                 }
