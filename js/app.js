@@ -118,8 +118,8 @@ $(document).ready(function() {
                     numberK += " ";
                     numberK += number.slice(number.length - 4, number.length - 1);
                     numberK += comma;
-                    numberK += number.slice(number.length - 1, number.length);
-                   	numberK += number.slice(number.length - 1, number.length) + currency;
+                    numberK += number.slice(number.length - 1, number.length)+ currency;
+                 
                     return numberK.bold();
                 } else {
                     console.log(number);
