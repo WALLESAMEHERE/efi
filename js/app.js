@@ -105,22 +105,21 @@ $(document).ready(function() {
                 	  var stringNumber = number.toString();
                 	// change dot to comma
                 	  	stringNumber = stringNumber.replace("\.",",");              	  	               	  
-                    var wynik = stringNumber + currency;
-                    return wynik;
+                   	stringNumber += currency;
+                    return stringNumber
                 } else if (number.length < 3) {
                     var numberK = number.slice(0, number.length - 1);
                     numberK += comma;
-                    numberK += number.slice(number.length - 1, number.length);
-                    var wynik = numberK + currency;
-                    return wynik;
+                    numberK += number.slice(number.length - 1, number.length) + currency;                    
+                    return numberK
                 } else if (number.length < 8) {
                     var numberK = number.slice(0, number.length - 4);
                     numberK += " ";
                     numberK += number.slice(number.length - 4, number.length - 1);
                     numberK += comma;
                     numberK += number.slice(number.length - 1, number.length);
-                    var wynik = numberK + currency;
-                    return wynik;
+                   	numberK += number.slice(number.length - 1, number.length) + currency;
+                    return numberK
                 } else {
                     console.log(number);
                 }
