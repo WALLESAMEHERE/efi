@@ -102,18 +102,18 @@ $(document).ready(function() {
                 	//  change the number to the decimal number after the decimal point
                 	number = parseInt(number, 10) / 10;
                 	// change number to string
-                	  var stringNumber = number.toString();
+                	  let stringNumber = number.toString();
                 	// change dot to comma
                 	  	stringNumber = stringNumber.replace("\.",",");              	  	               	  
                    	stringNumber += currency;
                     return stringNumber
                 } else if (number.length < 3) {
-                    var numberK = number.slice(0, number.length - 1);
+                    let numberK = number.slice(0, number.length - 1);
                     numberK += comma;
                     numberK += number.slice(number.length - 1, number.length) + currency;                    
                     return numberK
                 } else if (number.length < 8) {
-                    var numberK = number.slice(0, number.length - 4);
+                    let numberK = number.slice(0, number.length - 4);
                     numberK += " ";
                     numberK += number.slice(number.length - 4, number.length - 1);
                     numberK += comma;
