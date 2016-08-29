@@ -12,7 +12,7 @@
 .dash_avatar{
 		  figure.tooltips {
 		  position: relative;
-		  display: inline;
+		   
 		  ul{
 		  	opacity: 0;
 		  	transition: .2s;
@@ -45,6 +45,7 @@
 		}
 		figure:hover.tooltips{
 			span{
+
 			  visibility: visible; 
 			  height: 150px;
 			  bottom:-160px;
@@ -121,7 +122,7 @@
 
 }
 .user_search, .user_logout{
-	font-size: 2.8em;
+	font-size: 2.5em;
 	float: right;
 	padding: 10px 10px 0 0;
 }
@@ -143,6 +144,7 @@
 		transition:1s;
 	}
 	.magnifier{
+		width: 20%;
 		float: right;
 		padding: 0 3px;
 	}
