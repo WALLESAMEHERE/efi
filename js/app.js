@@ -109,7 +109,8 @@ $(document).ready(function() {
     };
     // induction function
     getDate();
-    //
+    
+// UNIVERSAL FUNCTION - change numbers
 
     // function - add a comma to of decimal and spaces to the thousandths
     function change(number, comma, currency) {
@@ -154,7 +155,7 @@ $(document).ready(function() {
     // TEST APIII history
     function getProducts() {
 
-        sendA("data/history", "GET", {}, lifeFinance, lifeError);
+        sendA("data/products", "GET", {}, lifeFinance, lifeError);
 
         function lifeFinance(a) {
             var text = a.content[0];
