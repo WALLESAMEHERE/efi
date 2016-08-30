@@ -82,8 +82,6 @@ $(document).ready(function() {
                     minimumFractionDigits: 2,
                 });
                 r = r.replace("\.", ",");
-
-
             });
             ///////////////////////////////// TEST TEST TEST
             var currencyPL = " PLN"
@@ -101,7 +99,7 @@ $(document).ready(function() {
 
             var test = 5;
 
-            
+
 
         };
 
@@ -109,48 +107,48 @@ $(document).ready(function() {
     };
     // induction function
     getDate();
-    
-// UNIVERSAL FUNCTION - change numbers
+
+    // UNIVERSAL FUNCTION - change numbers
 
     // function - add a comma to of decimal and spaces to the thousandths
     function change(number, comma, currency) {
-         
+
         let r = number.toLocaleString('pl', {
-                    minimumFractionDigits: 1,
-                });
+            minimumFractionDigits: 1,
+        });
         r = r.replace("\.", ",");
-        r +=" " + currency;
+        r += " " + currency;
         return r.bold();
 
-            /* ZAPYTAC O LICZBY
-                    if (number.length < 2) {
-                        number = number.replace("\.", ",");
-                        let stringNumber = number;
+        /* ZAPYTAC O LICZBY
+                if (number.length < 2) {
+                    number = number.replace("\.", ",");
+                    let stringNumber = number;
 
-                        // change dot to comma
-                         
-                        stringNumber += currency;
+                    // change dot to comma
+                     
+                    stringNumber += currency;
 
-                        return stringNumber.bold();
-                    } else if (number.length < 5) {
-                        let numberK = number.slice(0, number.length - 2);
+                    return stringNumber.bold();
+                } else if (number.length < 5) {
+                    let numberK = number.slice(0, number.length - 2);
 
-                        numberK += comma;
-                        numberK += number.slice(number.length - 2, number.length) + currency;
-                        return numberK.bold();
-                    } else if (number.length < 8) {
-                        let numberK = number.slice(0, number.length - 4);
+                    numberK += comma;
+                    numberK += number.slice(number.length - 2, number.length) + currency;
+                    return numberK.bold();
+                } else if (number.length < 8) {
+                    let numberK = number.slice(0, number.length - 4);
 
-                        numberK += " ";
-                        numberK += number.slice(number.length - 4, number.length - 1);
-                        numberK += comma;
-                        numberK += number.slice(number.length - 1, number.length) + currency;
+                    numberK += " ";
+                    numberK += number.slice(number.length - 4, number.length - 1);
+                    numberK += comma;
+                    numberK += number.slice(number.length - 1, number.length) + currency;
 
-                        return numberK.bold();
-                    } else {
-                        console.log(number);
-                    }
-            */
+                    return numberK.bold();
+                } else {
+                    console.log(number);
+                }
+        */
     }
     // TEST APIII history
     function getProducts() {
@@ -160,11 +158,11 @@ $(document).ready(function() {
         function lifeFinance(a) {
             var text = a.content[0];
             $.each(text, function(i, v) {
-                
-              
+
+
                 $('.testy').html(
-                change(text.amount, ",", text.currency)
-            );
+                    change(text.amount, ",", text.currency)
+                );
 
 
             });
