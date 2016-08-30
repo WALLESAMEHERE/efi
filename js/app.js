@@ -74,84 +74,105 @@ $(document).ready(function() {
             var text = a.content[0];
 
             ///////////////////////////////// TEST TEST TEST  - zapytac 
-            console.log(text.funds.toLocaleString());
+            // console.log(text.funds.toLocaleString());
 
             $.each(text, function(i, v) {
 
-               let r = v.toLocaleString('pl', { minimumFractionDigits: 2,});
-               r = r.replace("\.",",");
-               console.log(r);
-                         
+                let r = v.toLocaleString('pl', {
+                    minimumFractionDigits: 2,
+                });
+                r = r.replace("\.", ",");
+
+
             });
             ///////////////////////////////// TEST TEST TEST
-            var currency = " PLN"   
-            //  adding the data to the structure
+            var currencyPL = " PLN"
+                //  adding the data to the structure
 
             $('#balance span').html(
-            	change(text.balance, ",", "") + currency
-            	);
+                change(text.balance, ",", "") + currencyPL
+            );
             $('#av_funds span').html(
-            	change(text.funds, ",", "") + currency
-            	);
+                change(text.funds, ",", "") + currencyPL
+            );
             $('#payments span').html(
-            	change(text.payments, ",", "") + currency
-            	);
+                change(text.payments, ",", "") + currencyPL
+            );
 
-          	var test = 5;
+            var test = 5;
 
-            // function - add a comma to of decimal and spaces to the thousandths
-         
+            
+
         };
+
         function lifeError() {};
     };
     // induction function
     getDate();
     //
-       function change(number, comma, currency) {
-                number = new String(number);
-               
-                if (number.length < 2) {
-                    //  change the number to the decimal number after the decimal point
-                    number = parseInt(number, 10) / 10;
-                    // change number to string
-                      let stringNumber = number.toString();
-                    // change dot to comma
-                        stringNumber = stringNumber.replace("\.",",");                                        
-                    stringNumber += currency;
-                    return stringNumber.bold();
-                } else if (number.length < 3) {
-                    let numberK = number.slice(0, number.length - 1);
-                    numberK += comma;
-                    numberK += number.slice(number.length - 1, number.length) + currency;                    
-                    return numberK.bold();
-                } else if (number.length < 8) {
-                    let numberK = number.slice(0, number.length - 4);
-                    numberK += " ";
-                    numberK += number.slice(number.length - 4, number.length - 1);
-                    numberK += comma;
-                    numberK += number.slice(number.length - 1, number.length)+ currency;
-                 
-                    return numberK.bold();
-                } else {
-                    console.log(number);
-                }
-            }
-    // TEST APIII
-    function getProducts(){
+
+    // function - add a comma to of decimal and spaces to the thousandths
+    function change(number, comma, currency) {
+         
+        let r = number.toLocaleString('pl', {
+                    minimumFractionDigits: 1,
+                });
+        r = r.replace("\.", ",");
+        r +=" " + currency;
+        return r.bold();
+
+            /* ZAPYTAC O LICZBY
+                    if (number.length < 2) {
+                        number = number.replace("\.", ",");
+                        let stringNumber = number;
+
+                        // change dot to comma
+                         
+                        stringNumber += currency;
+
+                        return stringNumber.bold();
+                    } else if (number.length < 5) {
+                        let numberK = number.slice(0, number.length - 2);
+
+                        numberK += comma;
+                        numberK += number.slice(number.length - 2, number.length) + currency;
+                        return numberK.bold();
+                    } else if (number.length < 8) {
+                        let numberK = number.slice(0, number.length - 4);
+
+                        numberK += " ";
+                        numberK += number.slice(number.length - 4, number.length - 1);
+                        numberK += comma;
+                        numberK += number.slice(number.length - 1, number.length) + currency;
+
+                        return numberK.bold();
+                    } else {
+                        console.log(number);
+                    }
+            */
+    }
+    // TEST APIII history
+    function getProducts() {
+
         sendA("data/history", "GET", {}, lifeFinance, lifeError);
 
-        function lifeFinance(a){
+        function lifeFinance(a) {
             var text = a.content[0];
             $.each(text, function(i, v) {
-                console.log(i, v.toLocaleString());
+                
+              
                 $('.testy').html(
-                change(text.amount, ",",text.currency)
-                );
+                change(text.amount, ",", text.currency)
+            );
+
+
             });
         }
-        function lifeError(){}
+
+        function lifeError() {}
     }
     getProducts();
+
     //////////////////////////////////////// ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ 
 
     // user search animation 
@@ -184,7 +205,7 @@ $(document).ready(function() {
         }
     });
     // show mobile menu
-    $('.mobile_hamb').on('click', function(){
-    	$('.medium_nav').toggleClass('mobile_show');
+    $('.mobile_hamb').on('click', function() {
+        $('.medium_nav').toggleClass('mobile_show');
     });
 });
