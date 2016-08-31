@@ -153,7 +153,7 @@ $(document).ready(function() {
     // TEST APIII history
     function getProducts() {
 
-        sendA("data/products", "GET", {}, lifeFinance, lifeError);
+        sendA("data/history", "GET", {}, lifeFinance, lifeError);
 
         function lifeFinance(a) {
             var text = a.content[0];

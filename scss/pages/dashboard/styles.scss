@@ -128,6 +128,85 @@ section{
   
 	}
 
+	/* PRODUCTS */
+	.product_cont{
+		padding: .9375rem 0 0 .9375rem !important;
+		&:last-child{
+			float:left !important;
+		}
+	}
+	 
+	.products_box{
+		padding: 20px;
+		background-color: purple;
+		 position: relative;
+		 @include border-radius(5px);
+		 h4,p{
+		 		font-size: 1.2em;
+		 		text-align: left;
+		 		margin:0 !important;
+		 	}
+	 	.icona{
+			width: 30%;
+			float: left;
+			span{
+				font-size: 3em;
+			}
+		}
+	}
+	.history_box{
+
+		max-height: 350px;
+		overflow-y: scroll;
+		margin: .9375rem 0 .9375rem .9375rem !important;
+		
+		@include border-radius(5px);
+		&::-webkit-scrollbar-track
+			{	
+				border-radius:0 4px 4px 0;
+			  	background: silver;
+			}
+
+			&::-webkit-scrollbar
+			{
+			  	width: 8px;
+			  	 
+			}
+
+			&::-webkit-scrollbar-thumb
+			{	 
+			 
+			 	border-radius:42px;
+			  	background:rgba(0,0,0,0.3); 
+			}
+		ul{
+			width: 100%;
+			li{
+				height: 80px;
+				background-color: blue;
+				margin-bottom: 2px;
+				float: left;
+				width: 100%;
+				font-size: 1.1em;
+				padding: 0;
+				.history_data{
+						line-height: 80px;
+					
+									}
+				.history_desc{
+					padding-top: 10px;
+					margin: 0;
+					p{
+					margin: 0;	
+					text-align: left;
+					}
+				}
+				.history_money{
+					line-height: 80px;
+				}
+			}
+		}
+}
 	/* test */
 	.testy{
 	font-size:2em;
