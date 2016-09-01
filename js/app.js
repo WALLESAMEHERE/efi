@@ -155,17 +155,12 @@ $(document).ready(function() {
 
         sendA("data/history", "GET", {}, lifeFinance, lifeError);
 
-        function lifeFinance(a) {
-            var text = a.content[0];
-            $.each(text, function(i, v) {
+        function lifeFinance(historyData) {
+            
+            var text = historyData.content[0];
+            
 
 
-                $('.testy').html(
-                    change(text.amount, ",", text.currency)
-                );
-
-
-            });
         }
 
         function lifeError() {}
