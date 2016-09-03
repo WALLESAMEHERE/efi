@@ -88,13 +88,13 @@ $(document).ready(function() {
                 //  adding the data to the structure
 
             $('#balance span').html(
-                change(text.balance, ",", "") + currencyPL
+                change(text.balance, "") + currencyPL
             );
             $('#av_funds span').html(
-                change(text.funds, ",", "") + currencyPL
+                change(text.funds, "") + currencyPL
             );
             $('#payments span').html(
-                change(text.payments, ",", "") + currencyPL
+                change(text.payments, "") + currencyPL
             );
 
             var test = 5;
@@ -111,7 +111,7 @@ $(document).ready(function() {
     // UNIVERSAL FUNCTION - change numbers
 
     // function - add a comma to of decimal and spaces to the thousandths
-    function change(number, comma, currency) {
+    function change(number,currency) {
 
         let r = number.toLocaleString('pl', {
             minimumFractionDigits: 1,
@@ -157,10 +157,19 @@ $(document).ready(function() {
 
         function lifeFinance(historyData) {
             
-            var text = historyData.content[0];
             
-
-
+            
+            var ema = new Array(historyData.content);
+            var oho = ema[0];
+            for(var i = 0;i<oho.length;i++){
+                let tab = oho[i];
+                let number = change(tab.amount," ");
+                var lista = '<li>';
+                    lista += '<div class="row collapse"><div class="large-2 columns history_data">'+tab.date+'</div>';
+                    lista += '<div class="large-8 columns history_desc"><p class="descript">'+ tab.description+'</p><p class="category">'+tab.category+'</p></div>';
+                    lista +='<div class="large-2 columns history_money">'+number + tab.currency+'</div></div></li>';
+                    $('.test_ul').append(lista);
+            }        
         }
 
         function lifeError() {}
