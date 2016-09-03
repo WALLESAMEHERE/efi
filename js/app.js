@@ -114,7 +114,7 @@ $(document).ready(function() {
     function change(number,currency) {
 
         let r = number.toLocaleString('pl', {
-            minimumFractionDigits: 1,
+            minimumFractionDigits: 2,
         });
         r = r.replace("\.", ",");
         r += " " + currency;
@@ -155,26 +155,43 @@ $(document).ready(function() {
 
         sendA("data/history", "GET", {}, lifeFinance, lifeError);
 
-        function lifeFinance(historyData) {
-            
-            
-            
+        function lifeFinance(historyData) {    
             var ema = new Array(historyData.content);
             var oho = ema[0];
             for(var i = 0;i<oho.length;i++){
                 let tab = oho[i];
+                // function change fulldate to day and month
+                function formatDate(date){
+                    var d = new Date(date);
+                    // + 1 , bcs getMonth returns in the range from 0 to 11
+                    var month = d.getMonth() + 1;
+                    // <= 9 add 0 and returns two digit format
+                        if(month <= 9)
+                            month = '0'+month;
+
+                        var day= d.getDate();
+                        // <= 9 add 0 and returns two digit format
+                        if(day <= 9)
+                            day = '0'+day;
+                    return day+"."+month;
+                }
+                // function format fulldate to dat and month
+                let date = formatDate(tab.date);
+                // function change number - add a comma to of decimal and spaces to the thousandths
                 let number = change(tab.amount," ");
                 var lista = '<li>';
-                    lista += '<div class="row collapse"><div class="large-2 columns history_data">'+tab.date+'</div>';
+                    lista += '<div class="row collapse">';
+                    lista += '<div class="large-2 columns history_data">'+date+'</div>';
                     lista += '<div class="large-8 columns history_desc"><p class="descript">'+ tab.description+'</p><p class="category">'+tab.category+'</p></div>';
-                    lista +='<div class="large-2 columns history_money">'+number + tab.currency+'</div></div></li>';
+                    lista += '<div class="large-2 columns history_money">'+number + tab.currency+'</div></div></li>';
+                    // add li element to HTML
                     $('.test_ul').append(lista);
-            }        
+            }                    
         }
-
         function lifeError() {}
     }
     getProducts();
+    
 
     //////////////////////////////////////// ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ 
 
