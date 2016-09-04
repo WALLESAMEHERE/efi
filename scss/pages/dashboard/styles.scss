@@ -206,6 +206,12 @@ section{
 				}
 				.history_money{
 					line-height: 80px;
+					.number_status{
+					color:green !important;
+						.income_st{
+						color:green !important;
+						}
+					}
 				}
 			}
 		}

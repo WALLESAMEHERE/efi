@@ -111,7 +111,7 @@ $(document).ready(function() {
     // UNIVERSAL FUNCTION - change numbers
 
     // function - add a comma to of decimal and spaces to the thousandths
-    function change(number,currency) {
+    function change(number, currency) {
 
         let r = number.toLocaleString('pl', {
             minimumFractionDigits: 2,
@@ -119,79 +119,68 @@ $(document).ready(function() {
         r = r.replace("\.", ",");
         r += " " + currency;
         return r.bold();
-
-        /* ZAPYTAC O LICZBY
-                if (number.length < 2) {
-                    number = number.replace("\.", ",");
-                    let stringNumber = number;
-
-                    // change dot to comma
-                     
-                    stringNumber += currency;
-
-                    return stringNumber.bold();
-                } else if (number.length < 5) {
-                    let numberK = number.slice(0, number.length - 2);
-
-                    numberK += comma;
-                    numberK += number.slice(number.length - 2, number.length) + currency;
-                    return numberK.bold();
-                } else if (number.length < 8) {
-                    let numberK = number.slice(0, number.length - 4);
-
-                    numberK += " ";
-                    numberK += number.slice(number.length - 4, number.length - 1);
-                    numberK += comma;
-                    numberK += number.slice(number.length - 1, number.length) + currency;
-
-                    return numberK.bold();
-                } else {
-                    console.log(number);
-                }
-        */
+    }
+// function checking status
+    function checkStatus(number, status) {
+        if (status == 'outcome') {       
+            number = '-' + number; 
+            let numberb = number.bold();
+            console.log(numberb);     
+            return numberb;
+        } else if (status == 'income') {
+            var box = '<span class="number_status">';
+            box += number;
+            box += '</span>';
+            $('.number_status b').addClass('income_st');
+            return box;
+        }
     }
     // TEST APIII history
     function getProducts() {
 
         sendA("data/history", "GET", {}, lifeFinance, lifeError);
 
-        function lifeFinance(historyData) {    
-            var ema = new Array(historyData.content);
-            var oho = ema[0];
-            for(var i = 0;i<oho.length;i++){
-                let tab = oho[i];
+        function lifeFinance(historyData) {
+            var conte = new Array(historyData.content);
+            var table = conte[0];
+            for (var i = 0; i < table.length; i++) {
+                let tab = table[i];
                 // function change fulldate to day and month
-                function formatDate(date){
+                function formatDate(date) {;
                     var d = new Date(date);
                     // + 1 , bcs getMonth returns in the range from 0 to 11
                     var month = d.getMonth() + 1;
                     // <= 9 add 0 and returns two digit format
-                        if(month <= 9)
-                            month = '0'+month;
+                    if (month <= 9)
+                        month = '0' + month;
 
-                        var day= d.getDate();
-                        // <= 9 add 0 and returns two digit format
-                        if(day <= 9)
-                            day = '0'+day;
-                    return day+"."+month;
+                    var day = d.getDate();
+                    // <= 9 add 0 and returns two digit format
+                    if (day <= 9)
+                        day = '0' + day;
+                    return day + "." + month;
                 }
                 // function format fulldate to dat and month
                 let date = formatDate(tab.date);
                 // function change number - add a comma to of decimal and spaces to the thousandths
-                let number = change(tab.amount," ");
+                let number = change(tab.amount, " ");
+
+
                 var lista = '<li>';
-                    lista += '<div class="row collapse">';
-                    lista += '<div class="large-2 columns history_data">'+date+'</div>';
-                    lista += '<div class="large-8 columns history_desc"><p class="descript">'+ tab.description+'</p><p class="category">'+tab.category+'</p></div>';
-                    lista += '<div class="large-2 columns history_money">'+number + tab.currency+'</div></div></li>';
-                    // add li element to HTML
-                    $('.test_ul').append(lista);
-            }                    
+                lista += '<div class="row collapse">';
+                lista += '<div class="large-2 columns history_data">' + date + '</div>';
+                lista += '<div class="large-8 columns history_desc"><p class="descript">' + tab.description + '</p>';
+                lista += '<p class="category">' + tab.category + '</p></div>';
+                lista += '<div class="large-2 columns history_money">' + checkStatus(number, tab.status) + tab.currency + '</div></div></li>';
+                // add li element to HTML
+                $('.test_ul').append(lista);
+            }
         }
+
         function lifeError() {}
     }
     getProducts();
-    
+
 
     //////////////////////////////////////// ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ 
 
