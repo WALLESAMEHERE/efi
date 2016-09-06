@@ -24,7 +24,7 @@ section{
 
 .finance_graph{
 	width: 100%;
-	height: 350px;
+	height: 250px;
 	background-color: white;
 	@include border-radius(10px);
 }
@@ -137,23 +137,41 @@ section{
 	}
 	 
 	.products_box{
-		padding: 20px;
-		background-color: purple;
+		 padding: 20px;
+		 background-color: white;
 		 position: relative;
 		 @include border-radius(5px);
+		 transition: .6s;
 		 h4,p{
-		 		font-size: 1.2em;
+		 		font-size: 1em;
+		 		color:black;
 		 		text-align: left;
 		 		margin:0 !important;
 		 	}
 	 	.icona{
-			width: 30%;
+			width: 25%;
 			float: left;
+			position: relative;
+			color:silver;
 			span{
-				font-size: 3em;
+				font-size: 2.8em;	
+			}
+		}
+		&:hover{
+			cursor: pointer;
+			background-color: $login-bg;
+			span{
+				transition: .8s;
+				color:white;
 			}
 		}
 	}
+.products_depo span:after{
+	@extend .new_info;
+	content: "2";
+	font-size: 1.3rem;
+	color: white;
+}
 	.history_box{
 
 		max-height: 350px;
@@ -181,14 +199,21 @@ section{
 			}
 		ul{
 			width: 100%;
+			padding: 0;
+			margin: 0;
+			display: inline-block;
 			li{
+				text-transform: capitalize;
+				color:black;
 				height: 80px;
-				background-color: silver;
+				background-color: white;
 				margin-bottom: 2px;
 				float: left;
 				width: 100%;
 				font-size: 1.1em;
 				padding: 0;
+				text-decoration: none;
+				list-style-type: none;
 				.history_data{
 						line-height: 80px;
 					
@@ -197,6 +222,7 @@ section{
 					padding-top: 10px;
 					margin: 0;
 					p{
+					color:black;
 					margin: 0;	
 					text-align: left;
 					text-overflow:ellipsis;
@@ -205,6 +231,7 @@ section{
 					}
 				}
 				.history_money{
+					color:black;
 					line-height: 80px;
 					.number_status{
 					color:green !important;
@@ -216,6 +243,7 @@ section{
 			}
 		}
 }
+
 	/* test */
 	.testy{
 	font-size:2em;

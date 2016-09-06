@@ -66,18 +66,13 @@ $(document).ready(function() {
 
     // LIFE STREAM DATA
 
-    function getDate() {
+    (function getDate() {
         // arrow to server
         sendA("data/summary", "GET", {}, lifeFinance, lifeError);
         // succes
-        function lifeFinance(a) {
-            var text = a.content[0];
-
-            ///////////////////////////////// TEST TEST TEST  - zapytac 
-            // console.log(text.funds.toLocaleString());
-
+        function lifeFinance(data) {
+            var text = data.content[0];
             $.each(text, function(i, v) {
-
                 let r = v.toLocaleString('pl', {
                     minimumFractionDigits: 2,
                 });
@@ -96,17 +91,25 @@ $(document).ready(function() {
             $('#payments span').html(
                 change(text.payments, "") + currencyPL
             );
-
-            var test = 5;
-
-
-
         };
 
         function lifeError() {};
-    };
-    // induction function
-    getDate();
+    })();
+    (function getProducts() {
+        sendA("data/products", "GET", {}, lifeFinance, lifeError);
+        // succes
+        function lifeFinance(data) {
+            var text = data.content[0];
+            //  adding the data to the structure
+
+            $('.product_type').html( text.type);
+            $('.product_cash').html(change(text.amount, "") + text.currency);         
+        };
+        function lifeError(){};
+        
+    })();
+     
+    
 
     // UNIVERSAL FUNCTION - change numbers
 
@@ -120,12 +123,11 @@ $(document).ready(function() {
         r += " " + currency;
         return r.bold();
     }
-// function checking status
+    // function checking status
     function checkStatus(number, status) {
-        if (status == 'outcome') {       
-            number = '-' + number; 
+        if (status == 'outcome') {
+            number = '-' + number;
             let numberb = number.bold();
-            console.log(numberb);     
             return numberb;
         } else if (status == 'income') {
             var box = '<span class="number_status">';
@@ -133,10 +135,12 @@ $(document).ready(function() {
             box += '</span>';
             $('.number_status b').addClass('income_st');
             return box;
+        } else {
+            return false;
         }
     }
     // TEST APIII history
-    function getProducts() {
+    (function getHistory() {
 
         sendA("data/history", "GET", {}, lifeFinance, lifeError);
 
@@ -145,21 +149,6 @@ $(document).ready(function() {
             var table = conte[0];
             for (var i = 0; i < table.length; i++) {
                 let tab = table[i];
-                // function change fulldate to day and month
-                function formatDate(date) {;
-                    var d = new Date(date);
-                    // + 1 , bcs getMonth returns in the range from 0 to 11
-                    var month = d.getMonth() + 1;
-                    // <= 9 add 0 and returns two digit format
-                    if (month <= 9)
-                        month = '0' + month;
-
-                    var day = d.getDate();
-                    // <= 9 add 0 and returns two digit format
-                    if (day <= 9)
-                        day = '0' + day;
-                    return day + "." + month;
-                }
                 // function format fulldate to dat and month
                 let date = formatDate(tab.date);
                 // function change number - add a comma to of decimal and spaces to the thousandths
@@ -170,16 +159,31 @@ $(document).ready(function() {
                 lista += '<div class="row collapse">';
                 lista += '<div class="large-2 columns history_data">' + date + '</div>';
                 lista += '<div class="large-8 columns history_desc"><p class="descript">' + tab.description + '</p>';
-                lista += '<p class="category">' + tab.category + '</p></div>';
+                lista += '<p class="category">' + tab.category + '</p><ul><li></li>asdasd</ul></div>';
                 lista += '<div class="large-2 columns history_money">' + checkStatus(number, tab.status) + tab.currency + '</div></div></li>';
                 // add li element to HTML
-                $('.test_ul').append(lista);
+                $('.history_ul').append(lista);
             }
         }
 
         function lifeError() {}
+    })();
+    
+    // function change fulldate to day and month
+    function formatDate(date) {
+        var d = new Date(date);
+        // + 1 , bcs getMonth returns in the range from 0 to 11
+        var month = d.getMonth() + 1;
+        // <= 9 add 0 and returns two digit format
+        if (month <= 9)
+            month = '0' + month;
+
+        var day = d.getDate();
+        // <= 9 add 0 and returns two digit format
+        if (day <= 9)
+            day = '0' + day;
+        return day + "." + month;
     }
-    getProducts();
 
 
     //////////////////////////////////////// ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ 

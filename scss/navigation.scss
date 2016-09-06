@@ -14,9 +14,12 @@ ul{
 			color:white;
 			transition:$transition;
 		}
-		:hover{
-			color:$login-bg;
-		}
+		
+	}
+}
+.login_nav{
+	ul li a:hover{
+		color:$login-bg;
 	}
 }
  
