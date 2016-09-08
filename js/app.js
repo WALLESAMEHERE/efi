@@ -159,12 +159,17 @@ $(document).ready(function() {
                 lista += '<div class="row collapse">';
                 lista += '<div class="large-2 columns history_data">' + date + '</div>';
                 lista += '<div class="large-8 columns history_desc"><p class="descript">' + tab.description + '</p>';
-                lista += '<p class="category">' + tab.category + '</p><ul><li></li>asdasd</ul></div>';
+                lista += '<p class="category">' + tab.category + '</p><ul><span class="icon-chevron-down show_acc"></span><li>OK</li><li>Anuluj</li></ul></div>';
                 lista += '<div class="large-2 columns history_money">' + checkStatus(number, tab.status) + tab.currency + '</div></div></li>';
                 // add li element to HTML
                 $('.history_ul').append(lista);
             }
-        }
+             $('.show_acc').on('click', function(e){
+                $(this).parent().toggleClass('show_hist_nav');
+                $(e.target).toggleClass('activ_span');
+
+             });
+        };
 
         function lifeError() {}
     })();
@@ -221,4 +226,7 @@ $(document).ready(function() {
     $('.mobile_hamb').on('click', function() {
         $('.medium_nav').toggleClass('mobile_show');
     });
+
+    /////
+   
 });

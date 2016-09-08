@@ -229,6 +229,48 @@ section{
 					white-space: nowrap;
 					overflow: hidden;
 					}
+					.category{
+						float: left;
+						width: 10%;
+					}
+					ul{
+						text-align: left;
+						float: left;
+						width: 15%;
+						height: 25px;
+					    overflow: hidden;
+					    transition: .6s;
+						li{
+							@include border-radius(5px);
+							position: relative;
+							height: auto;
+							float: none;
+							width: 100%;
+							background-color:silver;
+							transition: .4s;
+							&:hover{
+
+								background-color:$login-bg;
+								color:white;
+							}
+						}
+					}
+					span{
+						transition: .5s;
+						display: inline-block;
+						color:$login-bg;
+						width: 30px;
+						height: 30px;	
+					}
+					.activ_span{
+						transform-origin:50% 25%;
+						-ms-transform: rotateX(180deg); 
+					    -webkit-transform: rotateX(180deg); 
+					    transform: rotateX(180deg); 
+					}
+					.show_hist_nav{
+						height: 120px;
+					}
 				}
 				.history_money{
 					color:black;
