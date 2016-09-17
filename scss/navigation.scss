@@ -4,49 +4,37 @@ ul{
 	float: left;
 	display: inline-block;
 	li{
+		position: relative;
 		text-decoration: none;
 		list-style-type:none;
 		float: left;
+		display:inline;
 		padding: 15px 15px 10px 5px;
-
 		a{
 			text-decoration: none;
 			color:white;
-			transition:$transition;
-		}
-		
+			@include transition(.4s);;
+		}	
 	}
-}
-.login_nav{
-	ul li a:hover{
-		color:$login-bg;
-	}
-}
- 
+} 
+/* header board */
 
-/* dashboard */
-
-.main_nav{
-	transform:translate(15%);
- 	li{ 
- 		position: relative;
+.main_nav{ 
+ 	li{ 	
  		padding:35px 14px 5px 14px;
- 		text-align: center;
- 		display:inline;
+ 		text-align: center;	
+ 		height: 144px;
  		a{ 
  			text-align: center;
  			padding:50px 0;
-
  		}
  		&:hover p{
  				color:white;
  				font-weight: bolder;
- 				@include translateY(-220%);
+ 				margin-top:-90px;
  			}
  		p{
-	 		-webkit-transition: -webkit-transform 0.3s;
-			-moz-transition: -moz-transform 0.3s;
-			transition: transform 0.3s;
+ 			@include transition(.5s);
 	 		padding:15px 0 0 0;
  		}
 	 	&:hover, &:hover::after,&:hover span{
@@ -73,14 +61,57 @@ ul{
 /* moblie menu */
 
 .mobile_hamb{
-	z-index: 999;
+	z-index: 99999;
 	display: block;
 	position: absolute;
 	top:10px;
 	left:16px;
-	background-color: silver;
-	width: 50px;
-	height: 50px;
-	border:5px solid black;
-
+	background-color: transparent;
+	width:36px;
+	height:36px;
+	cursor: pointer;
+	.hamb{
+		height: 4px;
+	    left: 0;
+	    position: absolute;
+	    width: 100%;
+	    border-radius: 2px;
+	}
+	.hamb-top, .hamb-mid,.hamb-bot{
+		@include transition(all 0.2s ease-in-out);
+		background-color: rgba(255, 255, 255, 1);
+	}
 }
+	.hamb_close{
+		.hamb-top{
+			    top: 5px;
+		}
+		.hamb-mid{
+			   		top:16px;
+		}
+		.hamb-bot{
+			    bottom: 5px;
+		}
+		&:hover {
+			.hamb-top{
+				top:2px;
+			}
+			.hamb-bot{
+				bottom: 2px;
+			}	
+		}
+	}
+	.hamb_open{
+		.hamb-top{
+			top:16px;
+			transform:rotate(45deg);
+		}
+		.hamb-mid{
+			display: none;
+		}
+		.hamb-bot{
+			top:16px;
+			transform:rotate(-45deg);
+		}
+	}
+

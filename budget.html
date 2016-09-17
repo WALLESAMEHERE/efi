@@ -101,165 +101,82 @@
                             <div class="user_logout">
                                 <span class="icon-switch" role="button" aria-label="Logout"></span>
                             </div>
-                            <div class="user_search">
-                                  <form>
-                                      <div class="sery">
-                                        <input type="search" role="search"></input>
-                                      </div>
-                                      <div class="magnifier">
-                                        <span class="icon-common-search-lookup-glyph" id="input_search_btn"></span>
-                                      </div>
-                                    </form>
-                            </div> 
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <section class="finance_panel">
-        <div class="row">
-              <div class="small-12 medium-6 large-8 column">
-                    <h1 class="small-only-text-center" role="heading" aria-level="1">Finance life stream</h1>
+              <section>
+            <div class="row">
+                <div class="large-7 columns">
+                    <h1 class="al_left">Budgets</h1>
                 </div>
-                <div class="medium-6 large-4 column buttons_panel right">
+                <div class="large-5 columns">
                     <div class="row">
-                        <div class="small-2 medium-2 large-2 column" role="toolbar" aria-label="Sorting Option" aria-controls="sortable"><label class="sort_gameinfo"><p>Add</p></label></div>
-                        <div class="small-5 medium-5 large-4 column board_buttons"><button type="button" class="active show_all_challenge" aria-pressed="true">Bank</button></div>
-                        <div class="small-5 medium-5 large-6 column board_buttons"><button type="button" class="hide_done_challenge" aria-pressed="false">Payment</button></div>
-                    </div>
-                </div>
-            </div>
-        <div class="row">
-        <!-- finance information -->
-           <div class="medium-9 columns finance_options">
-              <div class="row">
-              <!-- Balance -->
-                  <div class="medium-4 columns">
-                      <h3>Balance</h3>
-                      <p id="balance"><span></span></p>
-                  </div>
-              <!-- available funds -->
-                  <div class="medium-4 columns">
-                      <h3>Available funds</h3>
-                      <p id="av_funds"><span></span></p>
-                  </div>
-              <!-- payments -->
-                  <div class="medium-4 columns">
-                      <h3>Scheduled payments</h3>
-                      <p id="payments"><span></span></p>
-                  </div>
-              </div>
-          </div>
-          <!-- finance panel -->
-          <div class="medium-3 columns finance_options">
-                        <div class="row">
-                            <div class="medium-7 columns">
-                                <div class="finance_analysis">
-                                    <p class="right">Accounts analysis</p>
+                        <div class="large-2 columns">
+                            <p> Sorty By</p>
+                        </div>
+                        <div class="large-10 columns">
+                            <div class="row">
+                                <div class="large-3 columns finance_buttons">
+                                    <button>Personal</button>
                                 </div>
-                            </div>
-                            <div class="medium-5 columns">
-                               <div class="finance_analysis"> 
-                                  <div class="toggle toggle--neon">
-                                      <input type="checkbox" id="toggle--neon" class="toggle--checkbox">
-                                      <label class="toggle--btn" for="toggle--neon" data-label-on="on"  data-label-off="off"></label>
-                                  </div>
+                                <div class="large-3 columns finance_buttons">
+                                    <button>Progres</button>
+                                </div>
+                                <div class="large-3 columns">
+                                   
+                                </div>
+                                <div class="large-3 columns finance_buttons">
+                                    <button>ADD NEW</button>
                                 </div>
                             </div>
                         </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="medium-12 columns">
-              <div class="finance_graph" id="curve_chart">
-                
-              </div>
-          </div>
-        </div>
-      </section>
-      <section>
-      <div class="row">
-          <div class="large-6 columns">
+                    </div>
+                </div>
+            </div>
             <div class="row">
-                <div class="small-12 large-6 columns product_cont">
-                    <div class="products_box">
-                         <div class="icona">
-                              <span class="icon-wallet al_left"></span>
-                         </div>
-                         <h4 class="product_type"></h4>
-                         <p class="product_cash"></p>
-
+                <div class="large-7 columns">
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <h2>SUmmary</h2>
+                            <p>123 </p>
+                        </div>
+                        <div class="large-4 columns">
+                            <h2>Other</h2>
+                            <p>53545</p>
+                        </div>
+                        <div class="large-4 columns calendar">
+                            <h2>Month</h2>
+                            <span class="left"><</span><p class="get_month"></p><span class="right">></span>
+                        </div>
                     </div>
-                </div>
-                 <div class="small-12 large-6 columns product_cont">
-                    <div class="products_box">
-                         <div class="icona products_depo">
-                              <span class="icon-pig al_left"></span>
-                         </div>
-                         <h4> Deposits [2]</h4>
-                         <p>4 434 PLN</p>
-
-                    </div>
-                </div>
-                <div class="small-12 large-6 columns product_cont">
-                    <div class="products_box">
-                         <div class="icona">
-                              <span class="icon-money-3 al_left"></span>
-                         </div>
-                         <h4> Accounts </h4>
-                         <p>333 PLN</p>
-
-                    </div>
-                </div>
-                <div class="small-12 large-6 columns product_cont">
-                    <div class="products_box">
-                         <div class="icona">
-                              <span class="icon-bar-chart-o al_left"></span>
-                         </div>
-                         <h4> Funds </h4>
-                         <p>22 PLN</p>
-
-                    </div>
-                </div>
-                <div class="small-12 large-6 columns product_cont">
-                    <div class="products_box">
-                         <div class="icona">
-                              <span class="icon-point-right al_left"></span>
-                         </div>
-                         <h4> Bank loans </h4>
-                         <p>12 122 PLN</p>
-
-                    </div>
-                </div>
-                
-            </div>
-          </div>
-        
-     
-            <div class="large-6 columns">
-                <div class="history_box">
-                    <ul class="history_ul">
-                        
-                                             
-                    </ul>
                 </div>
             </div>
-         
+            <div class="row">
+                <div class="large-4 columns">
+                    <div class="circle">
+                        <div class="sometext">32323</div>
+                    </div>
+                </div>
+                 <div class="large-4 columns">
 
-      </section>
+                </div>
+                 <div class="large-4 columns">
 
+                </div>
+            </div>
+        </section>
 
     </div>
-
-
-
-    <!--scripts-->
+       
+    
+   
+<!--scripts-->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/what-input/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
     <script src="node_modules/moment/moment.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>

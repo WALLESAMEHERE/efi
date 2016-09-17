@@ -1,7 +1,6 @@
 
 
 *{
-	text-align:center;
 	box-sizing:border-box;
 }
 figure{
@@ -19,6 +18,9 @@ figure{
 .al_right{
 	text-align: right;
 }
+ span{
+ 	cursor: pointer;
+ }
 .new_info{
 	position:absolute;
 	content: "";
@@ -31,9 +33,40 @@ figure{
 	text-align: center;
 	font-size: .8em;
  }
- span{
- 	cursor: pointer;
- }
-.marg_reset{
-	margin:0 !important;
+
+ 
+
+
+
+
+/* budgets */
+.get_month{
+	
+
+}
+.calendar{
+	position: relative;
+	.left{
+			position: absolute;
+			top:62%;
+			left:20%;
+	}
+	.right{
+			position: absolute;
+			top:62%;
+			left:80%;
+	}
+	
+}
+.circle{
+	display: table;
+	border-radius: 100%;
+	width: 200px;
+	height: 200px;
+	border: 40px solid white;
+	.sometext{
+		text-align:center;
+		display: table-cell;
+		vertical-align: middle;
+	}
 }

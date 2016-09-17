@@ -18,6 +18,8 @@
 
 /* dashboard */
 @import 'pages/dashboard/background';
-@import 'pages/dashboard/styles';
-@import 'pages/dashboard/general';
-@import 'pages/dashboard/header';
+@import 'pages/dashboard/dashboard_styles';
+@import 'components/header';
+/* budget */
+@import 'pages/gameboard/background';
+@import 'pages/gameboard/gameboard_styles';

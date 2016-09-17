@@ -1,0 +1,119 @@
+.buttons_panel {
+    padding-top: 20px;
+}
+.sort_gameinfo {
+    height: 50px;
+    display: table;
+    font-size: 1.3em;
+    p {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+.game_result{
+    font-size: 1.3em;
+    span{
+        font-weight: bolder;
+    }
+}
+.game_pieces{
+    p{
+        font-size: 1.6em;
+    }
+}
+.universal_cont {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 5px;
+}
+.game_category {
+    @include border-radius(5px);
+    overflow: hidden;  
+    position: relative;
+    width: 100%;
+    @include transition(.4s);
+    color:white;
+    &:hover{
+    	 opacity:.7;
+ 		  -webkit-box-shadow: 0 0 5px 2px black;
+    -moz-box-shadow: 0 0 5px 2px black;
+    box-shadow: 0 0 4px 3px black;
+    }
+    img{
+    	width: 100%;
+    }
+    .order_information{
+    	z-index: 9999;
+    	position: absolute;
+    	bottom: 0px;
+    	text-align: center;
+    	font-size: 1.2em;
+    	width: 100%;
+    }
+    .select_work{
+    	position: absolute;
+    	z-index: 9999;
+    	left: 10px;
+    	top: 10px;
+    	span{
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		@include transition(.4s);
+    		font-size: 0;
+    	}
+    	p{
+    		@include transition(.4s);
+    		font-size: 2em;
+    		margin-top: -5px;
+    		float: left;
+    	}
+    }
+    .badge_place{
+    	color:white;
+    	font-size: 1.4em;
+    	position: absolute;
+    	top: 10px;
+    	right: 10px;
+    }
+    .check_box{
+    	font-size: 3em !important;
+    }
+    .percent_prog{
+    	font-size: 0em !important;
+    }
+}
+/* game category progress */
+.progress {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background-color:$login-bg;
+    position: absolute;
+    overflow: hidden;
+}
+.cate_saving {
+    .progress{
+    	width:88%;
+    }
+}
+.cate_pers_sett {
+   .progress{
+    	width:48%;
+   }
+}
+.cate_login{
+	.progress{
+		width: 100%;
+		visibility: hidden;
+	}
+}
+.cate_expense{
+	.progress{
+		width: 55%;
+	}
+}

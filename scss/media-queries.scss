@@ -1,19 +1,53 @@
 @media #{$small-only}{
-	.buttons_form{
-		button{
-			width:50%;
-		}
-	}
-	html, body{
+html, body{
 		height:auto !important;
 		margin: 0 auto;
 	}
+		button{
+			width:100%;
+		}
+/*reset padding */
+	.small-collapse {
+	    padding:0;
+	    margin:0;
+	    .columns {
+	      padding:0;
+	      margin:0;
+	    }
+  	}
 	.mobile_show{
 		width: 100% !important; 
 		left: 0 !important;
 	}
-	@include mobile;
-	
+	.user_board{
+		padding:10px 0;
+	}
+	.logo{
+		margin:0 auto;
+		width:30%;
+		float: none;
+	}
+	.user_message{
+		font-size: 1.4em;
+		padding-right: 20px;
+		.relative_msgbox{
+			float: none !important;
+			.user_panel_msg{
+				width:70vw;
+				top:70px;
+				right:60px;
+			}
+		}
+		span{
+			float:right !important;
+
+			&:after{
+
+				font-size:.6em;
+			}
+		}	
+	}
+	@include mobile;	
 } 
 @media #{$small-up}{
 	figure{
@@ -22,7 +56,6 @@
 			float:none;
 		}
 	}
-	
  }
 @media #{$medium-only} {
 	 .mobile_show{
@@ -31,19 +64,20 @@
 		border-right: 3px solid white;
 	 	border-bottom: 3px solid white;
 	 	border-radius: 0 0 5px 0;
-
 		}
 		@include mobile;
 }
  @media #{$medium-up}{
  	html, body{
-		height:100%;
-		 
+		height:100%; 
+	}
+	.user_logo_box{
+		width: 50%;
+		float: left;
 	}
  }
  @media #{$large-up}{
  	body{
-
  		background-size:150%;
  		.logo{
 		float:right;
@@ -53,3 +87,4 @@
 	 	display: none;
 	 }
  }
+ 
