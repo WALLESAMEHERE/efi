@@ -1,6 +1,6 @@
 .dash_head {
     color: white;
-    height:144px;
+    padding-bottom: -5px;
 }
 .user_board {
     padding: 8px;
@@ -57,6 +57,9 @@
     padding: 10px;
     font-size: 1.8em;
     p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
         line-height: 1;
     }
 }
@@ -71,8 +74,8 @@
     span {
         position: relative;
         float: left;
-        font-size: 1.5em;
-        padding: 10px;
+        font-size: 1.3em;
+        padding: 9px;
         display: inline-block;
         @include border-radius(100%);
         @include transition(.5s);
@@ -132,12 +135,11 @@
 }
 .right_header_panel{
     height: 144px;
-    padding: 20px;
+    padding: 20px 20px 20px 0;
 }
 .user_logout {
     height: 100%;
     display: table;
-    font-size: 2.5em;
     float: right;
     padding: 10px 5px;
     width: 20%;
@@ -153,28 +155,39 @@
     }
 }
 .user_search{
+    height:100%;
      width:80%;
-     margin-top: 13px;
-    span{
-        float: right;    
+     padding-right: 10px;
+    form{
+        height: 100%;
     }
-    input[type=search]{
+
+    .sery{
+        position: relative;
+        height: 100%;
+        float: right;
+        width: 0%;
+        transition:1s;
+            input[type=search]{
             width: 90%;
             float: right;
             padding: 0;
             border:none;
+            position: absolute;
+            top: 30%;
+            right: 0;
          }
-    .sery{
-        float: right;
-        width: 0%;
-        transition:1s;
     }
     .magnifier{
+        border:none;
         width: 20%;
         float: right;
-        padding: 0 3px;
+        padding: 0;
+        span{
+            color:white;
+        }
     }
     .clasa_on{
-        width: 80%;
+        width: 70%;
     }
 }

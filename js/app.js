@@ -137,6 +137,7 @@ $(document).ready(function() {
         function lifeFinance(historyData) {
             var conte = new Array(historyData.content);
             var table = conte[0];
+            console.log(table);
             for (var i = 0; i < table.length; i++) {
                 var tab = table[i];
                 // function format fulldate to dat and month
@@ -147,10 +148,10 @@ $(document).ready(function() {
 
                 var lista = '<li>';
                 lista += '<div class="row collapse">';
-                lista += '<div class="large-2 columns history_data text-center">' + date + '</div>';
-                lista += '<div class="large-8 columns history_desc"><p class="descript">' + tab.description + '</p>';
+                lista += '<div class="small-2 columns history_data text-center">' + date + '</div>';
+                lista += '<div class="small-8 columns history_desc"><p class="descript">' + tab.description + '</p>';
                 lista += '<p class="category">' + tab.category + '</p><ul><span class="icon-chevron-down show_acc"></span><li>OK</li><li>Anuluj</li></ul></div>';
-                lista += '<div class="large-2 columns history_money">' + checkStatus(number, tab.status) + tab.currency + '</div></div></li>';
+                lista += '<div class="small-2 columns history_money">' + checkStatus(number, tab.status) + tab.currency + '</div></div></li>';
                 // add li element to HTML
                 $('.history_ul').append(lista);
                 // // // // // //
@@ -162,7 +163,7 @@ $(document).ready(function() {
 
 // Declare columns
   data.addColumn('date', 'Data');
-      data.addColumn('number', 'Cash');
+      data.addColumn('number', 'Stan Konta');
 // starting balance
       var addition = 0;
 // loop Income expenses every day

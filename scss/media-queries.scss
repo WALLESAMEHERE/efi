@@ -3,9 +3,13 @@ html, body{
 		height:auto !important;
 		margin: 0 auto;
 	}
+	.product_cont{
+		padding-top: 0rem !important;
+	}
 		button{
 			width:100%;
 		}
+
 /*reset padding */
 	.small-collapse {
 	    padding:0;
@@ -56,6 +60,9 @@ html, body{
 			float:none;
 		}
 	}
+	h1{
+		text-align:center;
+	}
  }
 @media #{$medium-only} {
 	 .mobile_show{
@@ -64,6 +71,9 @@ html, body{
 		border-right: 3px solid white;
 	 	border-bottom: 3px solid white;
 	 	border-radius: 0 0 5px 0;
+		}
+		.user_logout{
+			font-size:2em;
 		}
 		@include mobile;
 }
@@ -83,6 +93,12 @@ html, body{
 		float:right;
 		}	
  	}
+ 	h1{
+ 		text-align:left;
+ 	}
+ 	.user_logout{
+		font-size:2.5em;
+	}
  	 .mobile_hamb{
 	 	display: none;
 	 }

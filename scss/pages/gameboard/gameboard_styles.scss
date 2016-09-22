@@ -5,7 +5,9 @@
     height: 50px;
     display: table;
     font-size: 1.3em;
+    width:100%;
     p {
+        text-align:center;
         display: table-cell;
         vertical-align: middle;
     }

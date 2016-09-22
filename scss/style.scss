@@ -4,7 +4,6 @@
 	box-sizing:border-box;
 }
 figure{
-	margin-right: 0px !important;
 	margin-top:0px;	 
 }
 .container{	 
@@ -28,10 +27,8 @@ figure{
 	right: 1px;
 	background-color: #EB2A81;
 	padding: 0px 6px 4px 6px;
-	line-height: .8;
 	@include border-radius(100%);
 	text-align: center;
-	font-size: .8em;
  }
 
  

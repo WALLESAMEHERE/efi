@@ -25,7 +25,7 @@
                 <div class="large-12 columns">
                     <div class="row">
                         <!-- user panel/logo -->
-                        <div class="medium-7 medium-offset-2 large-5 large-offset-0 columns user_board">
+                        <div class="medium-6 medium-offset-1 large-5 large-offset-0 columns user_board">
                             <div class="row collapse">
                                 <div class="small-6 small-offset-3 medium-6 medium-offset-0 columns user_graph">
                                     <div class="user_logo_box">
@@ -97,7 +97,7 @@
                             </nav>
                         </div>
                         <!-- search/logout -->
-                        <div class="hide-for-small-only medium-3 large-3 columns user_board right_header_panel">
+                        <div class="hide-for-small-only medium-5 large-3 columns user_board right_header_panel">
                             <div class="user_logout">
                                 <span class="icon-switch" role="button" aria-label="Logout"></span>
                             </div>
@@ -106,7 +106,7 @@
                                       <div class="sery">
                                         <input type="search" role="search"></input>
                                       </div>
-                                      <div class="magnifier">
+                                      <div class="magnifier user_logout">
                                         <span class="icon-common-search-lookup-glyph" id="input_search_btn"></span>
                                       </div>
                                     </form>
@@ -118,14 +118,14 @@
         </header>
         <section class="finance_panel">
         <div class="row">
-              <div class="small-12 medium-6 large-8 column">
+              <div class="small-12 medium-8 large-8 column">
                     <h1 class="small-only-text-center" role="heading" aria-level="1">Finance life stream</h1>
                 </div>
-                <div class="medium-6 large-4 column buttons_panel right">
+                <div class="medium-4 large-4 column buttons_panel right">
                     <div class="row">
-                        <div class="small-2 medium-2 large-2 column" role="toolbar" aria-label="Sorting Option" aria-controls="sortable"><label class="sort_gameinfo"><p>Add</p></label></div>
-                        <div class="small-5 medium-5 large-4 column board_buttons"><button type="button" class="active show_all_challenge" aria-pressed="true">Bank</button></div>
-                        <div class="small-5 medium-5 large-6 column board_buttons"><button type="button" class="hide_done_challenge" aria-pressed="false">Payment</button></div>
+                        <div class="small-2 medium-12 medium-only-text-center large-2 column" role="toolbar" aria-label="Sorting Option" aria-controls="sortable"><label class="sort_gameinfo"><p>Add</p></label></div>
+                        <div class="small-5 medium-12 large-4 column board_buttons"><button type="button" class="active show_all_challenge" aria-pressed="true">Bank</button></div>
+                        <div class="small-5 medium-12 large-6 column board_buttons"><button type="button" class="hide_done_challenge" aria-pressed="false">Payment</button></div>
                     </div>
                 </div>
             </div>
@@ -133,32 +133,47 @@
         <!-- finance information -->
            <div class="medium-9 columns finance_options">
               <div class="row">
-              <!-- Balance -->
-                  <div class="medium-4 columns">
-                      <h3>Balance</h3>
-                      <p id="balance"><span></span></p>
+                <div class="small-12 medium-4 large-3 columns text-left">
+                    <div class="row">
+                        <div class="small-6 medium-12 column">
+                            <h2 role="heading" aria-level="2">Miejsce w rankingu</h2>
+                        </div>
+                        <div class="small-6 medium-12 column">
+                            <p id="balance"><span></span></p>
                   </div>
-              <!-- available funds -->
-                  <div class="medium-4 columns">
-                      <h3>Available funds</h3>
-                      <p id="av_funds"><span></span></p>
-                  </div>
-              <!-- payments -->
-                  <div class="medium-4 columns">
-                      <h3>Scheduled payments</h3>
-                      <p id="payments"><span></span></p>
-                  </div>
+                </div>
               </div>
+              <div class="small-12 medium-4 large-3 columns text-left">
+                <div class="row">
+                  <div class="small-6 medium-12 column">
+                    <h2 role="heading" aria-level="2">Zadanie wykonane</h2>
+                  </div>
+                  <div class="small-6 medium-12 column">
+                     <p id="av_funds"><span></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-12 medium-4 large-3 columns text-left end">
+                    <div class="row">
+                        <div class="small-6 medium-12 column">
+                            <h2 role="heading" aria-level="2">Zdobyte odznaki</h2>
+                        </div>
+                        <div class="small-6 medium-12 column">
+                             <p id="payments"><span></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
           </div>
           <!-- finance panel -->
           <div class="medium-3 columns finance_options">
                         <div class="row">
-                            <div class="medium-7 columns">
+                            <div class="small-4 large-7 columns">
                                 <div class="finance_analysis">
                                     <p class="right">Accounts analysis</p>
                                 </div>
                             </div>
-                            <div class="medium-5 columns">
+                            <div class="small-8 large-5 columns">
                                <div class="finance_analysis"> 
                                   <div class="toggle toggle--neon">
                                       <input type="checkbox" id="toggle--neon" class="toggle--checkbox">
@@ -181,7 +196,7 @@
       <div class="row">
           <div class="large-6 columns">
             <div class="row">
-                <div class="small-12 large-6 columns product_cont">
+                <div class="small-12 medium-6 large-6 columns product_cont">
                     <div class="products_box">
                          <div class="icona">
                               <span class="icon-wallet al_left"></span>
@@ -191,7 +206,7 @@
 
                     </div>
                 </div>
-                 <div class="small-12 large-6 columns product_cont">
+                 <div class="small-12 medium-6 large-6 columns product_cont">
                     <div class="products_box">
                          <div class="icona products_depo">
                               <span class="icon-pig al_left"></span>
@@ -201,7 +216,7 @@
 
                     </div>
                 </div>
-                <div class="small-12 large-6 columns product_cont">
+                <div class="small-12 medium-6 large-6 columns product_cont">
                     <div class="products_box">
                          <div class="icona">
                               <span class="icon-money-3 al_left"></span>
@@ -211,7 +226,7 @@
 
                     </div>
                 </div>
-                <div class="small-12 large-6 columns product_cont">
+                <div class="small-12 medium-6 large-6 columns product_cont">
                     <div class="products_box">
                          <div class="icona">
                               <span class="icon-bar-chart-o al_left"></span>
@@ -221,7 +236,7 @@
 
                     </div>
                 </div>
-                <div class="small-12 large-6 columns product_cont">
+                <div class="small-12 medium-6 large-6 columns product_cont">
                     <div class="products_box">
                          <div class="icona">
                               <span class="icon-point-right al_left"></span>
@@ -237,7 +252,7 @@
         
      
             <div class="large-6 columns">
-                <div class="history_box">
+                <div class="history_box collapse">
                     <ul class="history_ul">
                         
                                              
