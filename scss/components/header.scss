@@ -70,17 +70,19 @@
     .relative_msgbox {
         float: left;
         position: relative;
-    }
-    span {
-        position: relative;
-        float: left;
-        font-size: 1.3em;
-        padding: 9px;
-        display: inline-block;
-        @include border-radius(100%);
-        @include transition(.5s);
-        &:hover {
-            background-color: #4DA1BD;
+    }a{
+        color:white;
+        span {
+            position: relative;
+            float: left;
+            font-size: 1.3em;
+            padding: 9px;
+            display: inline-block;
+            @include border-radius(100%);
+            @include transition(.5s);
+            &:hover {
+                background-color: #4DA1BD;
+            }
         }
     }
 }

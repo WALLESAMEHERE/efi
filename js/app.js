@@ -3,7 +3,7 @@ $(document).foundation();
 "use strict"
 /// //HEAD
 $(document).ready(function() {
-// global url
+    // global url
     const config = {
         baseApi: "https://efigence-camp.herokuapp.com/api/"
     };
@@ -87,6 +87,7 @@ $(document).ready(function() {
                 change(text.payments, "") + currencyPL
             );
         };
+
         function lifeError() {};
     })();
     (function getProducts() {
@@ -96,12 +97,13 @@ $(document).ready(function() {
             var text = data.content[0];
             //  adding the data to the structure
 
-            $('.product_type').html( text.type);
-            $('.product_cash').html(change(text.amount, "") + text.currency);         
+            $('.product_type').html(text.type);
+            $('.product_cash').html(change(text.amount, "") + text.currency);
         };
-        function lifeError(){};     
+
+        function lifeError() {};
     })();
- // UNIVERSAL FUNCTION - change numbers
+    // UNIVERSAL FUNCTION - change numbers
 
     // function - add a comma to of decimal and spaces to the thousandths
     function change(number, currency) {
@@ -137,7 +139,6 @@ $(document).ready(function() {
         function lifeFinance(historyData) {
             var conte = new Array(historyData.content);
             var table = conte[0];
-            console.log(table);
             for (var i = 0; i < table.length; i++) {
                 var tab = table[i];
                 // function format fulldate to dat and month
@@ -154,81 +155,79 @@ $(document).ready(function() {
                 lista += '<div class="small-2 columns history_money">' + checkStatus(number, tab.status) + tab.currency + '</div></div></li>';
                 // add li element to HTML
                 $('.history_ul').append(lista);
-                // // // // // //
-                google.charts.load('current', {'packages':['corechart']});
-                      google.charts.setOnLoadCallback(drawChart);
-
-                      function drawChart() {
-   var data = new google.visualization.DataTable();
-
-// Declare columns
-  data.addColumn('date', 'Data');
-      data.addColumn('number', 'Stan Konta');
-// starting balance
-      var addition = 0;
-// loop Income expenses every day
-      for (var i = 0; i < table.length; i++) {
-                var tab = table[i];
-            // changing EURO to PLN
-                function exkasa(number,currency){
-                    if(currency == "EUR"){
-                        var exchange = number * 4.30;
-                        return exchange;
-                  } 
-                  else{
-                    return number;
-                  }
-                }
-            // converted currency
-                var po = exkasa(tab.amount,tab.currency);
-            // changing number + or -
-                function kasa(number){
-                   if (tab.status == 'outcome') {
-                        number1 = parseInt(number);
-                        number2 = number1 - (number1 * 2);
-                        return number2;
-                    } else if (tab.status == 'income') {
-                        number1 = parseInt(number);
-                        return number1;
-                    } else {
-                        return false;
+                // // // // // /   
+            }
+                 google.charts.load('current', {
+                    'packages': ['corechart']
+                });
+                google.charts.setOnLoadCallback(drawChart);
+                function drawChart() {
+                    var data = new google.visualization.DataTable();
+                    // Declare columns
+                    data.addColumn('date', 'Data');
+                    data.addColumn('number', 'Stan Konta');
+                    // starting balance
+                    var addition = 0;
+                    // loop Income expenses every day
+                    for (var j = 0; j < table.length; j++) {
+                        var tab = table[j];
+                        // changing EURO to PLN
+                        function exkasa(number, currency) {
+                            if (currency == "EUR") {
+                                var exchange = number * 4.30;
+                                return exchange;
+                            } else {
+                                return number;
+                            }
+                        }
+                        // converted currency
+                        var po = exkasa(tab.amount, tab.currency);
+                        // changing number + or -
+                        function kasa(number) {
+                            if (tab.status == 'outcome') {
+                                number1 = parseInt(number);
+                                number2 = number1 - (number1 * 2);
+                                return number2;
+                            } else if (tab.status == 'income') {
+                                number1 = parseInt(number);
+                                return number1;
+                            } else {
+                                return false;
+                            }
+                        }
+                        // changed number + or - function
+                        var kasaminus = kasa(po);
+                        // account balance 
+                        var addition = addition + (kasaminus);
+                        data.addRows([
+                            [new Date(tab.date), addition],
+                        ]);
                     }
-                }
-// changed number + or - function
-        var kasaminus = kasa(po);
-// account balance 
-        var addition = addition +(kasaminus);
-      data.addRows([
-        [new Date(tab.date), addition],
-      ]);
-  }
-                        var options = {
-                          title: 'Efigence Camp',
-                            curveType: 'function',
-                            animation:{
+                    var options = {
+                        title: 'Efigence Camp',
+                        curveType: 'function',
+                        animation: {
                             duration: 1000,
                             easing: 'out',
-                          },
-                          legend: { position: 'bottom' }
-                        };
-                        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-                        chart.draw(data, options);
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    };
+                    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+                    chart.draw(data, options);
+                     console.log(data);
+                     console.log('kurwa');
                 }
-// // // // /// /// // /// // /
-            }
-             $('.show_acc').on('click', function(e){
+            $('.show_acc').on('click', function(e) {
                 $(this).parent().toggleClass('show_hist_nav');
                 $(e.target).toggleClass('activ_span');
-
-             });
-
-// chart 
-             
+            });
         };
 
         function lifeError() {}
     })();
-    
+
     // function change fulldate to day and month
     function formatDate(date) {
         var d = new Date(date);
@@ -244,36 +243,34 @@ $(document).ready(function() {
             day = '0' + day;
         return day + "." + month;
     }
-
-//
-(function getBudgetDate() {
+    (function getBudgetDate() {
         sendA("data/budget", "GET", {}, succesDate, lifeError);
         // succes
         function succesDate(data) {
             var text = data.content;
             //  adding the data to the structure
-            console.log(text.year);
         };
-        function lifeError(){};     
+
+        function lifeError() {};
     })();
     //////////////////////////////////////// ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ 
 
 
-(function pokazDate() {
-    let date = moment().format('MMMM YYYY');
+    (function pokazDate() {
+        let date = moment().format('MMMM YYYY');
         $('.get_month').html(date);
-        $('.left').on('click',function(){
-            let date = moment().add(-1 ,'months').format('MMMM YYYY');
+        $('.left').on('click', function() {
+            let date = moment().add(-1, 'months').format('MMMM YYYY');
             $('.get_month').html(date);
         });
-         $('.right').on('click',function(){
-            let date = moment().add(1 ,'months').format('MMMM YYYY');
+        $('.right').on('click', function() {
+            let date = moment().add(1, 'months').format('MMMM YYYY');
             $('.get_month').html(date);
         });
 
     })();
 
-     // user search animation 
+    // user search animation 
     $('#input_search_btn').on('click', function() {
         $('.sery').toggleClass('clasa_on'); // width from 0 too 80%;
     });
@@ -347,7 +344,7 @@ $(document).ready(function() {
             }
         });
     })();
-// adding a category game to aria-label
+    // adding a category game to aria-label
     (function gameInfoAria() {
         var zet = $('.game_category');
         for (var i = 0; i < zet.length; ++i) {
@@ -356,7 +353,9 @@ $(document).ready(function() {
             $(item).attr('aria-label', wid);
         }
     })();
-
-// google chart
-   
+    $('#curve_chart').ready(function() {
+        $(".image").delay(2500).fadeOut(); // Usuwamy grafikę ładowania
+        $(".preloaderx").delay(2500).fadeOut("slow");
+        $('.wrapper').fadeIn().css({'overflow':'visible'}); 
+    });
 });

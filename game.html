@@ -1,0 +1,446 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Efigence</title>
+    <link rel="Shortcut icon" href="img/icon-efi.png">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body role="document">
+<div class="preloaderx">
+    <div class="image">
+  </div>
+</div>
+    <!-- dash container -->
+    <div class="wrapper" role="main">
+        <!-- header -->
+        <header class="dash_head">
+            <!-- mobile hamb - < 1024px -->
+            <div class="mobile_hamb hamb_close" role="button navigation" aria-controls="menu" aria-label="Toggle Primary Menu">
+                <span class="hamb-top hamb"></span>
+                <span class="hamb-mid hamb"></span>
+                <span class="hamb-bot hamb"></span>
+            </div>
+            <div class="row">
+                <div class="large-12 columns">
+                    <div class="row">
+                        <!-- user panel/logo -->
+                        <div class="medium-7 medium-offset-2 large-5 large-offset-0 columns user_board">
+                            <div class="row collapse">
+                                <div class="small-6 small-offset-3 medium-6 medium-offset-0 columns user_graph">
+                                    <div class="user_logo_box">
+                                        <!-- logo -->
+                                        <figure class="logo" role="img">
+                                            <a href="dash.html" role="link"><img src="img/logo.png" alt="logo banku efigence"></a>
+                                        </figure>
+                                    </div>
+                                    <!-- avatar -->
+                                    <div class="user_logo_box dash_avatar hide-for-small-only">
+                                        <figure class="logo tooltips" role="img">
+                                            <img src="img/ninja.png" alt="user avatar">
+                                            <span role="tooltip"> 
+                                              <ul role="list">
+                                                <li>JAN KOWALOLO</li>
+                                                <li><strong>STATUS:</strong> biedny</li>
+                                              </ul>
+                                            </span>
+
+                                        </figure>
+                                    </div>
+                                </div>
+                                <!-- user panel -->
+                                <div class="small-2 medium-6 columns">
+                                    <!-- full name -->
+                                    <div class="user_full_name hide-for-small-only">
+                                        <p class="text-left"> Jan Kowalolo </p>
+                                    </div>
+                                    <!-- message/setings -->
+                                    <div class="user_panel">
+                                        <!-- message button -->
+                                        <div class="user_panel_icon user_message">
+                                            <a><span class="icon-seo-social-web-network-internet_95 right panel_btn" role="button" aria-label="Messages"></span></a>
+                                            <div class="relative_msgbox">
+                                                <!-- box with messages -->
+                                                <div class="user_panel_msg" role="alertdialog" aria-live="assertive" aria-hidden="true">
+                                                    <ul role="list">
+                                                        <li><a>Nowe wydatki</a> </li>
+                                                        <li><a>Wpłata</a></li>
+                                                    </ul>
+                                                    <div class="more_msg text-center">see all</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- settings button -->
+                                        <div class="user_panel_icon hide-for-small-only">
+                                            <a><span class="icon-Settings text-left panel_btn" role="button" aria-label="User settings"></span></a>
+                                            <div class="relative_msgbox">
+                                                <!-- box with settings -->
+                                                <div class="user_panel_msg" role="alertdialog" aria-live="assertive" aria-hidden="true">WARNING</div>
+                                            </div>
+                                        </div>
+                                        <div class="user_panel_icon hide-for-small-only">
+                                            <a href="game.html"><span class="icon-award text-left panel_btn" role="button" aria-label="Grywalizacja"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- navigation -->
+                        <div class="medium-0 large-4 columns medium_nav">
+                            <nav role="navigation">
+                                <ul class="main_nav" role="menubar">
+                                    <li role="presentation"><a href="" role="link menuitem"><span class="icon-Untitled-2-01"></span><p>HOME</p></a></li>
+                                    <li role="presentation"><a href="" role="link menuitem"><span class="icon-analyse"></span><p>ANALYSE</p></a></li>
+                                    <li role="presentation"><a href="" role="link menuitem"><span class="icon-icon-calendar"></span><p>PLAN</p></a></li>
+                                    <li role="presentation"><a href="" role="link menuitem"><span class="icon-dollars"></span><p>EARN</p></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- search/logout -->
+                        <div class="hide-for-small-only medium-3 large-3 columns user_board right_header_panel">
+                            <div class="user_logout">
+                                <span class="icon-switch" role="button" aria-label="Logout"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section role="region">
+            <div class="row">
+                <div class="small-12 medium-6 large-8 column">
+                    <h1 class="small-only-text-center" role="heading" aria-level="1">Grywalizacja </h1>
+                </div>
+                <div class="medium-6 large-4 column buttons_panel right">
+                    <div class="row">
+                        <div class="small-2 medium-2 large-2 column" role="toolbar" aria-label="Sorting Option" aria-controls="sortable"><label class="sort_gameinfo"><p>Pokaż</p></label></div>
+                        <div class="small-5 medium-5 large-4 column board_buttons"><button type="button" class="active show_all_challenge" aria-pressed="true">Wszystkie</button></div>
+                        <div class="small-5 medium-5 large-6 column board_buttons"><button type="button" class="hide_done_challenge" aria-pressed="false">Nieukończone</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-12 medium-4 large-3 columns text-left">
+                    <div class="row">
+                        <div class="small-6 medium-12 column">
+                            <h2 role="heading" aria-level="2">Miejsce w rankingu</h2>
+                        </div>
+                        <div class="small-6 medium-12 column">
+                            <div class="game_result"><span>100</div>
+                  </div>
+                </div>
+              </div>
+              <div class="small-12 medium-4 large-3 columns text-left">
+                <div class="row">
+                  <div class="small-6 medium-12 column">
+                    <h2 role="heading" aria-level="2">Zadanie wykonane</h2>
+                  </div>
+                  <div class="small-6 medium-12 column">
+                    <div class="game_result"><span>33</span> z 100</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-12 medium-4 large-3 columns text-left end">
+                    <div class="row">
+                        <div class="small-6 medium-12 column">
+                            <h2 role="heading" aria-level="2">Zdobyte odznaki</h2>
+                        </div>
+                        <div class="small-6 medium-12 column">
+                            <div class="game_result"><span>2</span> z 100</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-12 columns game_pieces">
+                    <p><b>Odkryj</b> zaskakujące możliwości swojego konta</p>
+                    <div class="row collapse">
+                        <div class="small-6 medium-3 large-2 columns">
+                            <div class="universal_cont challenge_compl" aria-hidden="false">
+                                <div class="game_category cate_login" role="checkbox" aria-checked="false">
+                                    <p class="order_information"> Zalogowanie sie </p>
+                                    <img src="img/bieg.jpg" alt="" role="img">
+                                    <div class="select_work">
+                                        <span class="icon-checkmark"></span>
+                                        <p class=""></p>
+                                    </div>
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns">
+                            <div class="universal_cont" aria-hidden="false">
+                                <div class="game_category" role="checkbox" aria-checked="false">
+                                    <img src="img/progress_0.jpg" alt="" role="img">
+                                    <p class="order_information"> Zarządanie wydatkami</p>
+                                    <div class="select_work">
+                                        <span class="icon-checkmark"></span>
+                                        <p>0%</p>
+                                    </div>
+                                    <div class="progress"></div>
+                                    <div class="badge_place">
+                                        <span class="icon-Settings text-left right "></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns">
+                            <div class="universal_cont" aria-hidden="false">
+                                <div class="game_category" role="checkbox" aria-checked="false">
+                                    <img src="img/progress_0.jpg" alt="" role="img">
+                                    <p class="order_information"> Zarządanie budżetem</p>
+                                    <div class="select_work">
+                                        <span class="icon-checkmark"></span>
+                                        <p>0%</p>
+                                    </div>
+                                    <div class="progress"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns">
+                            <div class="universal_cont" aria-hidden="false">
+                                <div class="game_category cate_saving" role="checkbox" aria-checked="false">
+                                    <img src="img/tarcza.jpg" alt="" role="img">
+                                    <p class="order_information"> Cele oszczędnościowe</p>
+                                    <span class="select_work">
+                                  <span class="icon-checkmark"></span>
+                                    <p>10%</p>
+                                    </span>
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns">
+                            <div class="universal_cont" aria-hidden="false">
+                                <div class="game_category cate_pers_sett" role="checkbox" aria-checked="false">
+                                    <img src="img/czas.jpg" alt="" role="img">
+                                    <p class="order_information"> Ustawienia osobiste</p>
+                                    <span class="select_work">
+                                <span class="icon-checkmark"></span>
+                                    <p>48%</p>
+                                    </span>
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns end">
+                            <div class="universal_cont" aria-hidden="false">
+                                <div class="game_category" role="checkbox" aria-checked="false">
+                                    <img src="img/progress_0.jpg" alt="" role="img">
+                                    <p class="order_information"> Dodawanie banków</p>
+                                    <span class="select_work">
+                                <span class="icon-checkmark"></span>
+                                    <p>0%</p>
+                                    </span>
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="large-12 columns game_pieces">
+                    <p><b>Korzystaj</b> tak jak lubisz i zbieraj odznaki tranzakcyjne</p>
+                    <div class="row collapse">
+                        <div class="small-6 medium-3 large-2 columns">
+                            <div class="universal_cont challenge_compl" aria-hidden="false">
+                                <div class="game_category cate_login" role="checkbox" aria-checked="false">
+                                    <img src="img/bieg.jpg" alt="" role="img">
+                                    <p class="order_information"> Zalogowanie sie</p>
+                                    <div class="select_work">
+                                        <span class="icon-checkmark"></span>
+                                        <p class=""></p>
+                                    </div>
+                                    <div class="progress"></div>
+                                    <div class="badge_place">
+                                        <span class="icon-star text-left right "></span>
+                                        <span class="icon-star text-left right "></span>
+                                        <span class="icon-star text-left right "></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns">
+                            <div class="universal_cont" aria-hidden="false">
+                                <div class="game_category cate_expense" role="checkbox" aria-checked="false">
+                                    <img src="img/kasa.jpg" alt="" role="img">
+                                    <p class="order_information"> Zarządanie wydatkami</p>
+                                    <div class="select_work">
+                                        <span class="icon-checkmark"></span>
+                                        <p>55%</p>
+                                    </div>
+                                    <div class="progress"></div>
+                                    <div class="badge_place">
+                                        <span class="icon-star text-left right "></span>
+                                        <span class="icon-star text-left right "></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns">
+                            <div class="universal_cont" aria-hidden="false">
+                                <div class="game_category" role="checkbox" aria-checked="false">
+                                    <img src="img/order_0.png" alt="" role="img">
+                                    <p class="order_information"> Zarządanie budżetem</p>
+                                    <div class="select_work">
+                                        <span class="icon-checkmark"></span>
+                                        <p></p>
+                                    </div>
+                                    <div class="progress"></div>
+                                    <div class="badge_place">
+                                        <span class="icon-Settings text-left right "></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns">
+                            <div class="universal_cont" aria-hidden="false">
+                                <div class="game_category" role="checkbox" aria-checked="false">
+                                    <img src="img/order_0.png" alt="" role="img">
+                                    <p class="order_information"> Cele oszczędnościowe</p>
+                                    <span class="select_work">
+                                  <span class="icon-checkmark"></span>
+                                    <p></p>
+                                    </span>
+                                    <div class="progress"></div>
+                                    <div class="badge_place">
+                                        <span class="icon-Settings text-left right "></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns">
+                            <div class="universal_cont" aria-hidden="false">
+                                <div class="game_category" role="checkbox" aria-checked="false">
+                                    <img src="img/order_0.png" alt="" role="img">
+                                    <p class="order_information"> Ustawienia osobiste</p>
+                                    <span class="select_work">
+                                <span class="icon-checkmark"></span>
+                                    <p></p>
+                                    </span>
+                                    <div class="progress"></div>
+                                    <div class="badge_place">
+                                        <span class="icon-Settings text-left right "></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns">
+                            <div class="universal_cont" aria-hidden="false">
+                                <div class="game_category" role="checkbox" aria-checked="false">
+                                    <img src="img/order_0.png" alt="" role="img">
+                                    <p class="order_information"> Dodawanie banków</p>
+                                    <span class="select_work">
+                                <span class="icon-checkmark"></span>
+                                    <p></p>
+                                    </span>
+                                    <div class="progress"></div>
+                                    <div class="badge_place">
+                                        <span class="icon-Settings text-left right "></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns">
+                            <div class="universal_cont" aria-hidden="false">
+                                <div class="game_category" role="checkbox" aria-checked="false">
+                                    <img src="img/order_0.png" alt="" role="img">
+                                    <p class="order_information"> Dodawanie banków</p>
+                                    <span class="select_work">
+                                <span class="icon-checkmark"></span>
+                                    <p></p>
+                                    </span>
+                                    <div class="progress"></div>
+                                    <div class="badge_place">
+                                        <span class="icon-Settings text-left right "></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns">
+                            <div class="universal_cont" aria-hidden="false">
+                                <div class="game_category" role="checkbox" aria-checked="false">
+                                    <img src="img/order_0.png" alt="" role="img">
+                                    <p class="order_information"> Dodawanie banków</p>
+                                    <span class="select_work">
+                                <span class="icon-checkmark"></span>
+                                    <p></p>
+                                    </span>
+                                    <div class="progress"></div>
+                                    <div class="badge_place">
+                                        <span class="icon-Settings text-left right "></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns">
+                            <div class="universal_cont" aria-hidden="false">
+                                <div class="game_category" role="checkbox" aria-checked="false">
+                                    <img src="img/order_0.png" alt="" role="img">
+                                    <p class="order_information"> Dodawanie banków</p>
+                                    <span class="select_work">
+                                <span class="icon-checkmark"></span>
+                                    <p></p>
+                                    </span>
+                                    <div class="progress"></div>
+                                    <div class="badge_place">
+                                        <span class="icon-Settings text-left right "></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns">
+                            <div class="universal_cont" aria-hidden="false">
+                                <div class="game_category" role="checkbox" aria-checked="false">
+                                    <img src="img/order_0.png" alt="" role="img">
+                                    <p class="order_information"> Dodawanie banków</p>
+                                    <span class="select_work">
+                                <span class="icon-checkmark"></span>
+                                    <p></p>
+                                    </span>
+                                    <div class="progress"></div>
+                                    <div class="badge_place">
+                                        <span class="icon-Settings text-left right "></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns end">
+                            <div class="universal_cont" aria-hidden="false">
+                                <div class="game_category" role="checkbox" aria-checked="false">
+                                    <img src="img/order_0.png" alt="" role="img">
+                                    <p class="order_information"> Dodawanie banków</p>
+                                    <span class="select_work">
+                                <span class="icon-checkmark"></span>
+                                    <p></p>
+                                    </span>
+                                    <div class="progress"></div>
+                                    <div class="badge_place">
+                                        <span class="icon-Settings text-left right "></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <!--scripts-->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/what-input/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+    <script src="node_modules/moment/moment.js"></script>
+    <script type="text/javascript" src="js/loader.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

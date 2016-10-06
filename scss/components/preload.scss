@@ -1,0 +1,38 @@
+.preloaderx {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color:$spam-close;
+	z-index: 999999;
+	.image{
+		width: 120px;
+		height: 120px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		background:url('../img/camp_logo.png') no-repeat center;
+		margin:-60px 0 0 -60px;
+		 -webkit-animation: preloadAnim 1.5s infinite; /* Safari 4+ */
+		 -moz-animation:    preloadAnim 1.5s infinite; /* Fx 5+ */
+		 -o-animation:      preloadAnim 1.5s infinite; /* Opera 12+ */
+		 animation:         preloadAnim 1.5s infinite; /* IE 10+, Fx 29+ */ 
+	}
+}
+@-webkit-keyframes preloadAnim {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+@-moz-keyframes preloadAnim {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+@-o-keyframes preloadAnim {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+@keyframes preloadAnim {
+ 0%   { transform: rotateY(0deg); }
+ 100% { transform: rotateY(360deg); }
+}
